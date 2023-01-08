@@ -4,8 +4,18 @@ site_description: An undergraduate econometric course
 site_author: Patrick Power
 
 nav: 
+  - Overview:
+      - Summary: index.md
   - Topics:
-      - Curse of Dimensionality: "chapters/curse_of_dimensionality.md"
+      - Approximation:
+        - Introduction: "chapters/approximation/introduction.md"
+        - Curse of Dimensionality: "chapters/approximation/curse_of_dimensionality.md"
+      - Optimization:
+        - Introduction: "chapters/optimization/introduction.md"
+      - Probability Theory: 
+        - Introduction: "chapters/probability theory/introduction.md"
+      - Programming: 
+        - Introduction: "chapters/programming/introduction.md"
 
 theme:
   name: material

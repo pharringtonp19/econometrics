@@ -1,17 +1,50 @@
-# Welcome to MkDocs
+<h1 style="text-align: center;color:#404065;font-weight:bold;">Econometrics</h1>
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+<h2 style="text-align: left;color:#404065;font-weight:bold;">Summary</h2>
 
-## Commands
+A course where we learn how to implement (:computer:) statistical models and interpret (:mag:) these models in various contexts.   
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
 
-## Project layout
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+<h2 style="text-align: left;color:#404065;font-weight:bold;">Components</h2>
+
+<div class="grid cards" markdown>
+
+-   __Approximation__
+
+    ---
+
+    TBD
+
+    ---
+    [:octicons-arrow-right-24: Getting started](chapters/real world events/introduction.md)
+
+-   __Optimization__
+
+    ---
+
+    TBD
+
+    ---
+    [:octicons-arrow-right-24: Getting started](chapters/optimization/introduction.md)
+
+-   __Probability Theory__
+
+    ---
+
+    TBD
+
+    ---
+    [:octicons-arrow-right-24: Getting started](chapters/Uncertainty/introduction.md)
+
+
+-   __Programming__
+
+    ---
+
+    TBD
+    
+    ---
+    [:octicons-arrow-right-24: Getting started](chapters/math on the computer/introduction.md)
+
+</div>
