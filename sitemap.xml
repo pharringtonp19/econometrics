@@ -6,7 +6,27 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://pharringtonp19.github.io/econometrics/chapters/curse_of_dimensionality/</loc>
+         <loc>https://pharringtonp19.github.io/econometrics/chapters/approximation/curse_of_dimensionality/</loc>
+         <lastmod>2023-01-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://pharringtonp19.github.io/econometrics/chapters/approximation/introduction/</loc>
+         <lastmod>2023-01-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://pharringtonp19.github.io/econometrics/chapters/optimization/introduction/</loc>
+         <lastmod>2023-01-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://pharringtonp19.github.io/econometrics/chapters/probability%20theory/introduction/</loc>
+         <lastmod>2023-01-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://pharringtonp19.github.io/econometrics/chapters/programming/introduction/</loc>
          <lastmod>2023-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
