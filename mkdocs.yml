@@ -13,6 +13,7 @@ nav:
         - Clusters: "chapters/approximation/clusters.md"
       - Optimization:
         - Introduction: "chapters/optimization/introduction.md"
+        - Differentiation: "chapters/optimization/differentiation.md"
       - Probability Theory: 
         - Introduction: "chapters/probability theory/introduction.md"
       - Programming: 
