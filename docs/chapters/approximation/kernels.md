@@ -1,6 +1,12 @@
 
 > These notes are taken from the following lectures: [Lecture](https://youtu.be/8n2_1EbST-8)
 
+### **Definitions**
+
+??? tip "Dual Space"
+
+    Let $X$ be a vector space. Then the dual space of $X$, denoted by $X^*$, is the set of linear bounded functions on $X$. 
+
 ### **Reproducing Kernel Hilbert Spaces**
 
 - Let $\mathcal{X}$ be a set 
@@ -29,4 +35,35 @@ l^2(\mathcal{X}):= \Big\{ f \mid f:\mathcal{X} \to \mathcal{R}, \quad
 \sum _{x\in \mathcal{X}} |f(x)|^2 < \infty \Big\}
 \end{align*}$$
 
+- This structure (set $+$ the norm/inner product)[^1] is an RKHS since 
 
+$$\| E_x \| \leq \| f \| _{l^2(\mathcal{X})}$$
+
+Consider the following function 
+
+$$\begin{align*}
+&\Lambda :: \mathcal{H} \to \mathcal{H} \to \mathcal{R}\\ 
+&\Lambda \ y \ x = \langle x, y \rangle _{\mathcal{H}}
+\end{align*}$$
+
+We can re-write the signature of the function as follows:
+
+$$\begin{align*}
+&\Lambda :: \mathcal{H} \to \mathcal{H}^*\\ 
+\end{align*}$$
+
+If $H$ is a RKHS, then by definition, $\textrm{Apply} \ x$ is a linear bounded functional. By Reisz representation theorem, 
+
+$$\textrm{Apply} \ x \ f = \langle r \ x, f \rangle _{\mathcal{H}} = f \ x $$
+
+Then we can define the Kernel as follows: 
+
+$$\begin{align*}
+&K :: \mathcal{X} \to \mathcal{X} \to \mathcal{R}  \\ 
+&K \ x \ y = r \ x \ y = \langle r \ y,  r \ x \rangle  \end{align*}$$
+
+
+
+
+
+[^1]: I really think the key part of this structure is the inner product
