@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#reproducing-kernel-hilbert-spaces" class="md-skip">
+        <a href="#definitions" class="md-skip">
           Skip to content
         </a>
       
@@ -550,6 +550,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definitions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reproducing-kernel-hilbert-spaces" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -905,6 +916,11 @@
 <blockquote>
 <p>These notes are taken from the following lectures: <a href="https://youtu.be/8n2_1EbST-8">Lecture</a></p>
 </blockquote>
+<h3 id="definitions"><strong>Definitions</strong></h3>
+<details class="tip">
+<summary>Dual Space</summary>
+<p>Let <span class="arithmatex">\(X\)</span> be a vector space. Then the dual space of <span class="arithmatex">\(X\)</span>, denoted by <span class="arithmatex">\(X^*\)</span>, is the set of linear bounded functions on <span class="arithmatex">\(X\)</span>. </p>
+</details>
 <h3 id="reproducing-kernel-hilbert-spaces"><strong>Reproducing Kernel Hilbert Spaces</strong></h3>
 <ul>
 <li>Let <span class="arithmatex">\(\mathcal{X}\)</span> be a set </li>
@@ -935,6 +951,33 @@
 l^2(\mathcal{X}):= \Big\{ f \mid f:\mathcal{X} \to \mathcal{R}, \quad 
 \sum _{x\in \mathcal{X}} |f(x)|^2 &lt; \infty \Big\}
 \end{align*}\]</div>
+<ul>
+<li>This structure (set <span class="arithmatex">\(+\)</span> the norm/inner product)<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> is an RKHS since </li>
+</ul>
+<div class="arithmatex">\[\| E_x \| \leq \| f \| _{l^2(\mathcal{X})}\]</div>
+<p>Consider the following function </p>
+<div class="arithmatex">\[\begin{align*}
+&amp;\Lambda :: \mathcal{H} \to \mathcal{H} \to \mathcal{R}\\ 
+&amp;\Lambda \ y \ x = \langle x, y \rangle _{\mathcal{H}}
+\end{align*}\]</div>
+<p>We can re-write the signature of the function as follows:</p>
+<div class="arithmatex">\[\begin{align*}
+&amp;\Lambda :: \mathcal{H} \to \mathcal{H}^*\\ 
+\end{align*}\]</div>
+<p>If <span class="arithmatex">\(H\)</span> is a RKHS, then by definition, <span class="arithmatex">\(\textrm{Apply} \ x\)</span> is a linear bounded functional. By Reisz representation theorem, </p>
+<div class="arithmatex">\[\textrm{Apply} \ x \ f = \langle r \ x, f \rangle _{\mathcal{H}} = f \ x \]</div>
+<p>Then we can define the Kernel as follows: </p>
+<div class="arithmatex">\[\begin{align*}
+&amp;K :: \mathcal{X} \to \mathcal{X} \to \mathcal{R}  \\ 
+&amp;K \ x \ y = r \ x \ y = \langle r \ y,  r \ x \rangle  \end{align*}\]</div>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>I really think the key part of this structure is the inner product&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
 
 
