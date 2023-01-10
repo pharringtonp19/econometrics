@@ -1,8 +1,15 @@
+> "If you have a tricky problem to solve, finding a language in which the solution to that problem is compositional is like the most important step. Well, defining the problem clearly is the most important step. The second one is finding a vocabulary in which it's compositional."[^1]
+
 This entire section is taken from Conal Elliot's presentation titled: "[Automatic Differentiation Made Easy Via Category Theory](https://www.youtube.com/watch?v=17gfCTnw6uE)"
+
+- A **Derivative** is a linear map 
 
 - [Cateogy Theory is the abstract algebra of functions](https://youtu.be/ZKmodCApZwk?list=PL8Ky8lYL8-Oh7awp0sqa82o7Ggt4AGhyf&t=35)
 
-> "If you have a tricky problem to solve, finding a language in which the solution to that problem is compositional is like the most important step. Well, defining the problem clearly is the most important step. The second one is finding a vocabulary in which is compositional."[^1]
+
+
+
+
 
 - Let $a,b$ be Banach spaces (complete normed vector spaces)
 

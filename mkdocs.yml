@@ -10,6 +10,7 @@ nav:
       - Approximation:
         - Introduction: "chapters/approximation/introduction.md"
         - Curse of Dimensionality: "chapters/approximation/curse_of_dimensionality.md"
+        - Kernels: "chapters/approximation/kernels.md"
         - Clusters: "chapters/approximation/clusters.md"
       - Optimization:
         - Introduction: "chapters/optimization/introduction.md"
