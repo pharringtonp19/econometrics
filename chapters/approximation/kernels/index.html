@@ -12,13 +12,13 @@
         <meta name="author" content="Patrick Power">
       
       
-        <link rel="canonical" href="https://pharringtonp19.github.io/econometrics/chapters/optimization/introduction/">
+        <link rel="canonical" href="https://pharringtonp19.github.io/econometrics/chapters/approximation/kernels/">
       
       
-        <link rel="prev" href="../../approximation/clusters/">
+        <link rel="prev" href="../curse_of_dimensionality/">
       
       
-        <link rel="next" href="../differentiation/">
+        <link rel="next" href="../clusters/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>Introduction - Econometrics</title>
+        <title>Kernels - Econometrics</title>
       
     
     
@@ -86,6 +86,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#reproducing-kernel-hilbert-spaces" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -115,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introduction
+              Kernels
             
           </span>
         </div>
@@ -209,7 +214,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../approximation/introduction/" class="md-tabs__link md-tabs__link--active">
+        <a href="../introduction/" class="md-tabs__link md-tabs__link--active">
           
   
   Topics
@@ -381,6 +386,8 @@
                 
   
   
+    
+  
   
     
     
@@ -395,15 +402,15 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+        <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
         
-          <label class="md-nav__link" for="__nav_2_1" tabindex="0" aria-expanded="false">
+          <label class="md-nav__link" for="__nav_2_1" tabindex="0" aria-expanded="true">
             
   
   <span class="md-ellipsis">
@@ -437,7 +444,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../approximation/introduction/" class="md-nav__link">
+      <a href="../introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -463,7 +470,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../approximation/curse_of_dimensionality/" class="md-nav__link">
+      <a href="../curse_of_dimensionality/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -487,9 +494,33 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../approximation/kernels/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    
+  
+    Kernels
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -504,6 +535,35 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#reproducing-kernel-hilbert-spaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reproducing Kernel Hilbert Spaces
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -515,7 +575,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../approximation/clusters/" class="md-nav__link">
+      <a href="../clusters/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -547,8 +607,6 @@
                 
   
   
-    
-  
   
     
     
@@ -559,15 +617,15 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+        <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
         
-          <label class="md-nav__link" for="__nav_2_2" tabindex="0" aria-expanded="true">
+          <label class="md-nav__link" for="__nav_2_2" tabindex="0" aria-expanded="false">
             
   
   <span class="md-ellipsis">
@@ -599,16 +657,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../optimization/introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -623,7 +674,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -635,7 +685,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../differentiation/" class="md-nav__link">
+      <a href="../../optimization/differentiation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -850,7 +900,41 @@
 
 
 
+  <h1>Kernels</h1>
 
+<blockquote>
+<p>These notes are taken from the following lectures: <a href="https://youtu.be/8n2_1EbST-8">Lecture</a></p>
+</blockquote>
+<h3 id="reproducing-kernel-hilbert-spaces"><strong>Reproducing Kernel Hilbert Spaces</strong></h3>
+<ul>
+<li>Let <span class="arithmatex">\(\mathcal{X}\)</span> be a set </li>
+<li>Let <span class="arithmatex">\(F(\mathcal{X}, \mathcal{R})\)</span> be the vector space of funcions defined on <span class="arithmatex">\(\mathcal{X}\)</span>. i.e. </li>
+</ul>
+<div class="arithmatex">\[f_1, f_2 \in F(\mathcal{X}, \mathcal{R}) \implies \alpha f_1 + \beta f_2 \in F(\mathcal{X}, \mathcal{R})\]</div>
+<ul>
+<li>
+<p>Then <span class="arithmatex">\(\mathcal{H}(\mathcal{X}, \mathcal{R}) \subset F(\mathcal{X}, \mathcal{R})\)</span> is a <strong>Reproducing Kernel Hilbert Space</strong> if </p>
+<ol>
+<li><span class="arithmatex">\(\mathcal{H}(\mathcal{X}, \mathcal{R})\)</span> is a subspace of <span class="arithmatex">\(F(\mathcal{X}, \mathcal{R})\)</span></li>
+<li><span class="arithmatex">\(\Big(\mathcal{H}(\mathcal{X}, \mathcal{R}), \langle \cdot, \cdot  \rangle _{\mathcal{H}} \Big)\)</span> is a Hilbert Space</li>
+<li>Evaluation Functionals, <span class="arithmatex">\(\textrm{Apply}_x\)</span>, are continuous</li>
+</ol>
+<div class="arithmatex">\[ \textrm{Apply} : \mathcal{X} \to \mathcal{H}(\mathcal{X}, \mathcal{R}) \to \mathcal{R}
+ \]</div>
+</li>
+</ul>
+<p><strong>Note</strong>: </p>
+<ul>
+<li>We can think of Euclidean Spaces as a function space.</li>
+</ul>
+<div class="arithmatex">\[\mathcal{R} ^n \equiv \Big( F(\textrm{Fin} \ n, \mathcal{R}), \langle z_1, z_2  \rangle _{F} :=  \sum _{i=1}^n z_1(i)z_2(i)\Big)\]</div>
+<ul>
+<li>We can generalize this structure to  <span class="arithmatex">\(l^2(\mathcal{X})\)</span></li>
+</ul>
+<div class="arithmatex">\[\begin{align*}
+l^2(\mathcal{X}):= \Big\{ f \mid f:\mathcal{X} \to \mathcal{R}, \quad 
+\sum _{x\in \mathcal{X}} |f(x)|^2 &lt; \infty \Big\}
+\end{align*}\]</div>
 
 
 

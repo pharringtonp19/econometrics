@@ -2,42 +2,47 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://pharringtonp19.github.io/econometrics/</loc>
-         <lastmod>2023-01-09</lastmod>
+         <lastmod>2023-01-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://pharringtonp19.github.io/econometrics/chapters/approximation/clusters/</loc>
-         <lastmod>2023-01-09</lastmod>
+         <lastmod>2023-01-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://pharringtonp19.github.io/econometrics/chapters/approximation/curse_of_dimensionality/</loc>
-         <lastmod>2023-01-09</lastmod>
+         <lastmod>2023-01-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://pharringtonp19.github.io/econometrics/chapters/approximation/introduction/</loc>
-         <lastmod>2023-01-09</lastmod>
+         <lastmod>2023-01-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://pharringtonp19.github.io/econometrics/chapters/approximation/kernels/</loc>
+         <lastmod>2023-01-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://pharringtonp19.github.io/econometrics/chapters/optimization/differentiation/</loc>
-         <lastmod>2023-01-09</lastmod>
+         <lastmod>2023-01-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://pharringtonp19.github.io/econometrics/chapters/optimization/introduction/</loc>
-         <lastmod>2023-01-09</lastmod>
+         <lastmod>2023-01-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://pharringtonp19.github.io/econometrics/chapters/probability%20theory/introduction/</loc>
-         <lastmod>2023-01-09</lastmod>
+         <lastmod>2023-01-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://pharringtonp19.github.io/econometrics/chapters/programming/introduction/</loc>
-         <lastmod>2023-01-09</lastmod>
+         <lastmod>2023-01-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
