@@ -86,6 +86,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#probability-space" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -446,6 +451,23 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -461,6 +483,89 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#probability-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Probability Space
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-space-hypothesis-class-model-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Function Space/ Hypothesis Class/ Model Class
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loss-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Loss Function
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#population-risk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Population Risk
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#empirical-risk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Empirical Risk
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algorithm
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -850,7 +955,85 @@
 
 
 
+  <h1>Introduction</h1>
 
+<div class="admonition abstract">
+<p class="admonition-title">Abstract</p>
+<p>In this note we introduce the fundamentals of the learning problem </p>
+</div>
+<h4 id="probability-space">Probability Space</h4>
+<details class="warning">
+<summary>Warning</summary>
+<p>Is the Borel Sigma Algebra well defined here? Should we add restrictions on <span class="arithmatex">\(\mathcal{X}, \mathcal{Y}\)</span>?</p>
+</details>
+<div class="arithmatex">\[\Big( \mathcal{X} \times \mathcal{Y}, \mathcal{B}(\mathcal{X} \times \mathcal{Y}), \mathbb{P}\Big)\]</div>
+<h4 id="function-space-hypothesis-class-model-class">Function Space/ Hypothesis Class/ Model Class</h4>
+<details class="warning">
+<summary>Warning</summary>
+<p>What additional restrictions should we place on <span class="arithmatex">\(\mathcal{H}\)</span>?</p>
+</details>
+<div class="arithmatex">\[ \mathcal{H} := \{h \mid h : \mathcal{X} \to \mathcal{Y} \}\]</div>
+<h4 id="loss-function">Loss Function</h4>
+<details class="warning">
+<summary>Warning</summary>
+<p>Make note on parameterization</p>
+</details>
+<div class="arithmatex">\[\begin{align*}
+&amp;l : \mathcal{H} \to \mathcal{X} \to \mathcal{Y} \\
+&amp;l(h, x, y) = (y - h(x))^2
+\end{align*}\]</div>
+<h4 id="population-risk">Population Risk</h4>
+<div class="arithmatex">\[\begin{align*}
+&amp;L :: \mathcal{H} \to \mathcal{R}_+ \\ 
+&amp;L(h) := \underset{(x,y)\sim p}{\mathbb{E}} \big[l(h, x, y)\big]\end{align*}\]</div>
+<h4 id="empirical-risk">Empirical Risk</h4>
+<div class="arithmatex">\[
+\begin{align*}
+&amp;\hat{L} :: \{X, Y\}^n \to \Theta \to \mathcal{R}_+ \\
+&amp;\hat{L}(\{x_i, y_i\}_{i=1}^n, \theta) = \frac{1}{n} \sum _i l(\theta, x_i, y_i)
+\end{align*}\]</div>
+<details class="tip">
+<summary>Partial Evaluation</summary>
+<p>Partially evaluated at <span class="arithmatex">\(\theta\)</span>, <span class="arithmatex">\(\hat{L}\)</span>  is a random variable. Taking its expectation</p>
+<div class="arithmatex">\[
+\begin{align*}
+\mathbb{E}\big[ \hat{L} _{\theta}\big] &amp;= \mathbb{E}\big[ \frac{1}{n} \sum _i l(\theta, x_i, y_i)\big] \\ 
+&amp;= \frac{1}{n} \sum _i \mathbb{E}\big[ l(\theta, x_i, y_i)\big] \\ 
+&amp;= L(\theta) \end{align*}\]</div>
+<p>But we are not really interested in this relationship, becuase <span class="arithmatex">\(\hat{L}\)</span> is not partially evaluated in practice. In practice, we use our training data to determine <span class="arithmatex">\(\theta\)</span>. That is we have an algorithm <span class="arithmatex">\(\mathcal{A}\)</span>. </p>
+</details>
+<h4 id="algorithm">Algorithm</h4>
+<div class="arithmatex">\[
+\begin{align*}
+\mathcal{A} :: \{\mathcal{X}, \mathcal{Y}\}^n \to \Theta 
+\end{align*}
+\]</div>
+<ul>
+<li>Empirical Risk Minimization</li>
+</ul>
+<div class="arithmatex">\[
+\begin{align*}
+&amp;\textrm{ERM} :: \{X, Y\}^n \to \Theta  \\
+&amp;\textrm{ERM}(\{x_i, y_i\}_{i=1}^n) = \underset{\theta \in \Theta}{\textrm{minimize}} \ \hat{L}(\{x_i, y_i\}_{i=1}^n, \theta)  
+\end{align*}\]</div>
+<ul>
+<li>
+<p>Which is just a random variable. We can evaluate it as follows: </p>
+<div class="arithmatex">\[
+\begin{align*}
+\mathbb{E} \big[ L \circ \mathcal{A} \big]
+\end{align*}
+\]</div>
+</li>
+<li>
+<p>Excess Risk:</p>
+</li>
+</ul>
+<div class="arithmatex">\[ 
+\begin{align*}
+&amp;E :: \mathcal{H} \to \mathcal{R}_+ \\
+&amp;E(h) = L(h) - \underset{g \in \mathcal{H}}{\inf} L(g)
+\end{align*}\]</div>
 
 
 
