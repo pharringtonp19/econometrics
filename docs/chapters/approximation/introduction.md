@@ -71,6 +71,10 @@ $$
 &\textrm{ERM}(\{x_i, y_i\}_{i=1}^n) = \underset{\theta \in \Theta}{\textrm{minimize}} \ \hat{L}(\{x_i, y_i\}_{i=1}^n, \theta)  
 \end{align*}$$
 
+- Consistency: 
+
+    $$\mathbb{P}_n ( \| \mathcal{A}_n - \theta _0 \| > \varepsilon) \to 0  $$
+
 
 
 - Which is just a random variable. We can evaluate it as follows: 
