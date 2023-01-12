@@ -555,6 +555,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#hmm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hmm
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#algorithm" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -698,6 +709,8 @@
       
         
       
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -775,6 +788,32 @@
     
   
     Differentiation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../optimization/overparam/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Overparameterization
   
 
     
@@ -987,8 +1026,17 @@
 
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
-<p>In this note we introduce the fundamentals of the learning problem </p>
+<p>We're interested in the behavior/performance of Estimators/Algorithms </p>
 </div>
+<p>In applied microeconometrics where we are generally interested in the causal effect of some policy/intervention we use <strong>estimators/algorithms</strong> with the following signature. </p>
+<div class="arithmatex">\[\begin{align*}
+\mathcal{A}_1 :: \{ \mathcal{X} \times \mathcal{Y} \}^n \to \mathcal{R}\\ 
+\end{align*}\]</div>
+<p>For example, let's assume that we are interested in the average outcome. Then we can define the estimator as follow:</p>
+<div class="arithmatex">\[\begin{align*}
+&amp;\mathcal{A}_1 :: \{ \mathcal{X} \times \mathcal{Y} \}^n \to \mathcal{R}\\ 
+&amp;\mathcal{A}_1 \big(\{x_i, y_i \})_{i=1}^n\big) = \frac{1}{n} \sum y_i \\ 
+\end{align*}\]</div>
 <h4 id="probability-space">Probability Space</h4>
 <details class="warning">
 <summary>Warning</summary>
@@ -1013,23 +1061,43 @@
 <h4 id="population-risk">Population Risk</h4>
 <div class="arithmatex">\[\begin{align*}
 &amp;L :: \mathcal{H} \to \mathcal{R}_+ \\ 
-&amp;L(h) := \underset{(x,y)\sim p}{\mathbb{E}} \big[l(h, x, y)\big]\end{align*}\]</div>
+&amp;L(h) := \underset{(x,y)\sim p}{\mathbb{E}} \big[l(h, x, y)\big] \\
+&amp;L(h)= \int _{\mathcal{X} \times \mathcal{Y}}l(h, X, Y)d\mathbb{P} \end{align*}\]</div>
 <h4 id="empirical-risk">Empirical Risk</h4>
 <div class="arithmatex">\[
 \begin{align*}
 &amp;\hat{L} :: \{X, Y\}^n \to \Theta \to \mathcal{R}_+ \\
 &amp;\hat{L}(\{x_i, y_i\}_{i=1}^n, \theta) = \frac{1}{n} \sum _i l(\theta, x_i, y_i)
 \end{align*}\]</div>
-<details class="tip">
-<summary>Partial Evaluation</summary>
+<details class="info">
+<summary>Partial Evaluation: Expectation</summary>
 <p>Partially evaluated at <span class="arithmatex">\(\theta\)</span>, <span class="arithmatex">\(\hat{L}\)</span>  is a random variable. Taking its expectation</p>
 <div class="arithmatex">\[
 \begin{align*}
-\mathbb{E}\big[ \hat{L} _{\theta}\big] &amp;= \mathbb{E}\big[ \frac{1}{n} \sum _i l(\theta, x_i, y_i)\big] \\ 
+\mathbb{E}\big[ \hat{L} _{\theta}\big] &amp;= \mathbb{E}\Big[ \frac{1}{n} \sum _i l(\theta, x_i, y_i)\Big] \\ 
 &amp;= \frac{1}{n} \sum _i \mathbb{E}\big[ l(\theta, x_i, y_i)\big] \\ 
 &amp;= L(\theta) \end{align*}\]</div>
-<p>But we are not really interested in this relationship, becuase <span class="arithmatex">\(\hat{L}\)</span> is not partially evaluated in practice. In practice, we use our training data to determine <span class="arithmatex">\(\theta\)</span>. That is we have an algorithm <span class="arithmatex">\(\mathcal{A}\)</span>. </p>
 </details>
+<details class="info">
+<summary>Partial Evaluation: Variance</summary>
+<div class="arithmatex">\[
+\begin{align*}
+\textrm{Var}(\hat{L} _{\theta})  &amp;= \textrm{Var}\Big[ \frac{1}{n} \sum _i l(\theta, x_i, y_i)\Big] \\ 
+&amp;= \frac{1}{n^2} \sum _i \textrm{Var}\big[ l(\theta, x_i, y_i)\big] \\ 
+&amp;= \frac{\textrm{Var}\big[ l(\theta, x_i, y_i)\big]}{n}
+\end{align*}\]</div>
+</details>
+<details class="tip">
+<summary>Partial Evaluation: Variance</summary>
+<p>Partially evaluated at <span class="arithmatex">\(\theta\)</span>, <span class="arithmatex">\(\hat{L}\)</span>  is a random variable. Taking its expectation</p>
+<div class="arithmatex">\[
+\begin{align*}
+\mathbb{E}\big[ \hat{L} _{\theta}\big] &amp;= \mathbb{E}\Big[ \frac{1}{n} \sum _i l(\theta, x_i, y_i)\Big] \\ 
+&amp;= \frac{1}{n} \sum _i \mathbb{E}\big[ l(\theta, x_i, y_i)\big] \\ 
+&amp;= L(\theta) \end{align*}\]</div>
+</details>
+<h4 id="hmm">Hmm</h4>
+<p>But we are not really interested in this relationship, becuase <span class="arithmatex">\(\hat{L}\)</span> is not partially evaluated in practice. In practice, we use our training data to determine <span class="arithmatex">\(\theta\)</span>. That is we have an algorithm <span class="arithmatex">\(\mathcal{A}\)</span>. </p>
 <h4 id="algorithm">Algorithm</h4>
 <div class="arithmatex">\[
 \begin{align*}

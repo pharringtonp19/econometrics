@@ -12,13 +12,13 @@
         <meta name="author" content="Patrick Power">
       
       
-        <link rel="canonical" href="https://pharringtonp19.github.io/econometrics/chapters/approximation/curse_of_dimensionality/">
+        <link rel="canonical" href="https://pharringtonp19.github.io/econometrics/chapters/optimization/overparam/">
       
       
-        <link rel="prev" href="../asymptotics/">
+        <link rel="prev" href="../differentiation/">
       
       
-        <link rel="next" href="../kernels/">
+        <link rel="next" href="../../probability%20theory/introduction/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>Curse of Dimensionality - Econometrics</title>
+        <title>Overparameterization - Econometrics</title>
       
     
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#numerical-integration" class="md-skip">
+        <a href="#belkins-claim" class="md-skip">
           Skip to content
         </a>
       
@@ -120,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Curse of Dimensionality
+              Overparameterization
             
           </span>
         </div>
@@ -214,7 +214,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../introduction/" class="md-tabs__link md-tabs__link--active">
+        <a href="../../approximation/introduction/" class="md-tabs__link md-tabs__link--active">
           
   
   Topics
@@ -386,8 +386,6 @@
                 
   
   
-    
-  
   
     
     
@@ -404,15 +402,15 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
+        <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
         
-          <label class="md-nav__link" for="__nav_2_1" tabindex="0" aria-expanded="true">
+          <label class="md-nav__link" for="__nav_2_1" tabindex="0" aria-expanded="false">
             
   
   <span class="md-ellipsis">
@@ -435,6 +433,198 @@
             
   
     Approximation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../approximation/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../approximation/asymptotics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Asymptotics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../approximation/curse_of_dimensionality/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Curse of Dimensionality
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../approximation/kernels/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Kernels
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../approximation/clusters/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Clusters
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+        
+          <label class="md-nav__link" for="__nav_2_2" tabindex="0" aria-expanded="true">
+            
+  
+  <span class="md-ellipsis">
+    
+  
+    Optimization
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" aria-label="Optimization" data-md-level="2">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Optimization
   
 
           </label>
@@ -472,13 +662,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../asymptotics/" class="md-nav__link">
+      <a href="../differentiation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Asymptotics
+    Differentiation
   
 
     
@@ -511,7 +701,7 @@
   <span class="md-ellipsis">
     
   
-    Curse of Dimensionality
+    Overparameterization
   
 
     
@@ -528,7 +718,7 @@
   <span class="md-ellipsis">
     
   
-    Curse of Dimensionality
+    Overparameterization
   
 
     
@@ -552,21 +742,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#numerical-integration" class="md-nav__link">
+  <a href="#belkins-claim" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Numerical Integration
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#monte-carlo-integration" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Monte-Carlo Integration
+        Belkin's Claim:
       
     </span>
   </a>
@@ -577,196 +756,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../kernels/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Kernels
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../clusters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Clusters
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
-        
-          <label class="md-nav__link" for="__nav_2_2" tabindex="0" aria-expanded="false">
-            
-  
-  <span class="md-ellipsis">
-    
-  
-    Optimization
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" aria-label="Optimization" data-md-level="2">
-          <label class="md-nav__title" for="__nav_2_2">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Optimization
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../optimization/introduction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Introduction
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../optimization/differentiation/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Differentiation
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../optimization/overparam/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Overparameterization
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -967,20 +956,23 @@
 
 
 
-  <h1>Curse of Dimensionality</h1>
+  <h1>Overparameterization</h1>
 
-<blockquote>
-<p>A pure sampling phenomena </p>
-</blockquote>
-<h3 id="numerical-integration"><strong>Numerical Integration</strong></h3>
-<div class="arithmatex">\[\int _{[0,1]^d}f dx\]</div>
-<h3 id="monte-carlo-integration"><strong>Monte-Carlo Integration</strong></h3>
-<div class="arithmatex">\[\begin{align*}\hat{\theta} &amp;= \frac{1}{n}\sum _{i=1}^n \big(f(X_i) + \varepsilon_i) \\ 
-&amp;= \frac{1}{n}\sum _{i=1}^n f(X_i) + \frac{1}{n}\sum _{i=1}^n \varepsilon_i \\ \\ 
-\mathbb{E}[\hat{\theta}] &amp;= \mathbb{E} \Bigg[\frac{1}{n}\sum _{i=1}^n f(X_i) + \frac{1}{n}\sum _{i=1}^n \varepsilon_i  \Bigg] \\ 
-&amp;= \frac{1}{n}\sum _{i=1}^n \mathbb{E}\big[f(X_i)\big] + \frac{1}{n}\sum _{i=1}^n \mathbb{E}\underbrace{\big[\varepsilon _i\big]}_{=0} \\
-&amp;= \mathbb{E}\big[f(X_i)\big] \\ \\ 
-\mathbb{E}\big[(\hat{\theta} - \theta_0 \big)^2] &amp;= \textrm{Var}(\hat{\theta})\end{align*}\]</div>
+<h4 id="belkins-claim"><a href="https://youtu.be/_lCM207PdxQ?t=654">Belkin's Claim</a>:</h4>
+<p>(1) If we have a solution manifold and (2) if this manifold has curvature then the loss function is not locally convex. </p>
+<div class="admonition tip">
+<p class="admonition-title">Proof</p>
+<p>Assume we have a solution manifold. </p>
+<div class="arithmatex">\[f(y) \geq f(x) + \nabla f(x)^T(y-x)\]</div>
+</div>
+<details class="info">
+<summary>Lemma</summary>
+<p>Minimizers of Convex Function form a Convex Set</p>
+<ul>
+<li>Let <span class="arithmatex">\(x_1, x_2\)</span> be minimizers of a convex function <span class="arithmatex">\(f\)</span>. i.e. <span class="arithmatex">\(\forall x \ f(x) \geq x_1, x_2\)</span></li>
+<li>Then <span class="arithmatex">\(\forall \alpha \in (0,1), \alpha x_1 + (1-\alpha x_2)\)</span> is also a minimizer of <span class="arithmatex">\(f\)</span>.</li>
+</ul>
+</details>
 
 
 
