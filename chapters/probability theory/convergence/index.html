@@ -12,9 +12,13 @@
         <meta name="author" content="Patrick Power">
       
       
-        <link rel="canonical" href="https://pharringtonp19.github.io/econometrics/chapters/optimization/papers/">
+        <link rel="canonical" href="https://pharringtonp19.github.io/econometrics/chapters/probability%20theory/convergence/">
       
       
+        <link rel="prev" href="../introduction/">
+      
+      
+        <link rel="next" href="../../programming/introduction/">
       
       
         
@@ -25,7 +29,7 @@
     
     
       
-        <title>Papers - Econometrics</title>
+        <title>Convergence - Econometrics</title>
       
     
     
@@ -82,6 +86,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#convergence-in-distribution" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -111,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Papers
+              Convergence
             
           </span>
         </div>
@@ -192,6 +201,8 @@
       
         
 
+  
+
 
 
 
@@ -203,7 +214,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../approximation/introduction/" class="md-tabs__link">
+        <a href="../../approximation/introduction/" class="md-tabs__link md-tabs__link--active">
           
   
   Topics
@@ -319,6 +330,8 @@
       
   
   
+    
+  
   
     
     
@@ -333,15 +346,15 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
         
-          <label class="md-nav__link" for="__nav_2" tabindex="0" aria-expanded="false">
+          <label class="md-nav__link" for="__nav_2" tabindex="0" aria-expanded="true">
             
   
   <span class="md-ellipsis">
@@ -621,7 +634,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../introduction/" class="md-nav__link">
+      <a href="../../optimization/introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -647,7 +660,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../differentiation/" class="md-nav__link">
+      <a href="../../optimization/differentiation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -673,7 +686,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../overparam/" class="md-nav__link">
+      <a href="../../optimization/overparam/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -705,6 +718,8 @@
                 
   
   
+    
+  
   
     
     
@@ -715,15 +730,15 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" checked>
         
-          <label class="md-nav__link" for="__nav_2_3" tabindex="0" aria-expanded="false">
+          <label class="md-nav__link" for="__nav_2_3" tabindex="0" aria-expanded="true">
             
   
   <span class="md-ellipsis">
@@ -757,7 +772,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../probability%20theory/introduction/" class="md-nav__link">
+      <a href="../introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -781,9 +796,33 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../probability%20theory/convergence/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    
+  
+    Convergence
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -798,6 +837,46 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#convergence-in-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Convergence in Distribution
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convergence-in-probability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Convergence in Probability
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -916,9 +995,30 @@
 
 
 
+  <h1>Convergence</h1>
+
+<div class="admonition abstract">
+<p class="admonition-title">TLDR</p>
+<p>For both of these definitions, the underlying probability space can vary with <span class="arithmatex">\(n\)</span>!</p>
+</div>
+<h3 id="convergence-in-distribution"><strong>Convergence in Distribution</strong></h3>
 <ul>
-<li><a href="https://arxiv.org/abs/1804.10200">The loss landscape of overparameterized neural networks</a></li>
+<li>A random variable <span class="arithmatex">\(X_n\)</span> convergences in distribution (or in law )to <span class="arithmatex">\(X\)</span> when the corresponding sequence of CDFs converge "pointwise" to the CDF
+of <span class="arithmatex">\(X\)</span></li>
 </ul>
+<div class="arithmatex">\[\begin{align}
+X_n \to_D X \implies F_{X_n} \to F_X 
+\end{align}\]</div>
+<h3 id="convergence-in-probability"><strong>Convergence in Probability</strong></h3>
+<blockquote>
+<p>If the limit is a random variable, then we care aboout the joint distribution!</p>
+</blockquote>
+<ul>
+<li>A random variable <span class="arithmatex">\(X_n\)</span> converges in probability to <span class="arithmatex">\(X\)</span> when for all <span class="arithmatex">\(\varepsilon &gt; 0\)</span> the following holds:</li>
+</ul>
+<div class="arithmatex">\[\begin{align}
+\underset{n \to \infty}{\lim}\mathbb{P}(\|X_n - X \| &gt; \varepsilon)= 0
+\end{align}\]</div>
 
 
 
