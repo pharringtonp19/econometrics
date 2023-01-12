@@ -19,6 +19,7 @@ nav:
         - Overparameterization: "chapters/optimization/overparam.md"
       - Probability Theory: 
         - Introduction: "chapters/probability theory/introduction.md"
+        - Convergence: "chapters/probability theory/convergence.md"
       - Programming: 
         - Introduction: "chapters/programming/introduction.md"
 

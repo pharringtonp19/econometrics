@@ -3,27 +3,37 @@
 
     We're interested in the behavior/performance of Estimators/Algorithms 
 
-In applied microeconometrics, where we are generally interested in the causal effect of some policy/intervention, we use **estimators/algorithms** with the following signature. 
+In applied microeconometrics, where we are generally interested in the causal effect of some policy/intervention, we use **estimators** with the following signature. 
 
 $$\begin{align*}
-\mathcal{A}_1 :: \{ \mathcal{X} \times \mathcal{Y} \}^n \to \mathcal{R}^p\\ 
+\mathcal{A} :: \{ \mathcal{X} \times \mathcal{Y} \}^n \to \mathcal{R}^p\\ 
 \end{align*}$$
 
-Occasionally, these algorithms have an analytical form. For example, if we are interested in the average outcome we may use the following estimator. 
+Occasionally, these estimators will have an analytical form. For example, if we are interested in the average outcome we may use the following estimator. 
 
 $$\begin{align*}
-&\mathcal{A}_1 :: \{ \mathcal{X} \times \mathcal{Y} \}^n \to \mathcal{R}\\ 
-&\mathcal{A}_1 \big(\{x_i, y_i \})_{i=1}^n\big) = \frac{1}{n} \sum y_i \\ 
+&\mathcal{A} :: \{ \mathcal{X} \times \mathcal{Y} \}^n \to \mathcal{R}\\ 
+&\mathcal{A} \big(\{x_i, y_i \})_{i=1}^n\big) = \frac{1}{n} \sum y_i \\ 
 \end{align*}$$
 
 Or if we are interested in the linear approximation to the **CEF** we may use the following estimator. 
 
 $$\begin{align*}
-&\mathcal{A}_1 :: \{ \mathcal{X} \times \mathcal{Y} \}^n \to \mathcal{R}^p\\ 
-&\mathcal{A}_1 \big(\{x_i, y_i \})_{i=1}^n\big) = \big( X^TX)^{-1}X^TY \\ 
+&\mathcal{A} :: \{ \mathcal{X} \times \mathcal{Y} \}^n \to \mathcal{R}^p\\ 
+&\mathcal{A} \big(\{x_i, y_i \})_{i=1}^n\big) = \big( X^TX)^{-1}X^TY \\ 
 \end{align*}$$
 
+We may, though, be interested in more "complex" estimators that involve neural networks.
 
+$$\begin{align*}
+&\mathcal{A} :: \{ \mathcal{X} \times \mathcal{Y} \}^n \to \mathcal{R}\\ 
+&\mathcal{A} \big(\{x_i, y_i \})_{i=1}^n\big) = \sum f(\theta_1, x_i) - f(\theta_2, x_i) \\ 
+& \quad \textrm{where} \ \theta_i = \dots
+\end{align*}$$
+
+??? warning "To Do"
+
+    Make the connection to kernel methods
 
 
 #### Probability Space 
