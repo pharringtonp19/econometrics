@@ -3,18 +3,28 @@
 
     We're interested in the behavior/performance of Estimators/Algorithms 
 
-In applied microeconometrics where we are generally interested in the causal effect of some policy/intervention we use **estimators/algorithms** with the following signature. 
+In applied microeconometrics, where we are generally interested in the causal effect of some policy/intervention, we use **estimators/algorithms** with the following signature. 
 
 $$\begin{align*}
-\mathcal{A}_1 :: \{ \mathcal{X} \times \mathcal{Y} \}^n \to \mathcal{R}\\ 
+\mathcal{A}_1 :: \{ \mathcal{X} \times \mathcal{Y} \}^n \to \mathcal{R}^p\\ 
 \end{align*}$$
 
-For example, let's assume that we are interested in the average outcome. Then we can define the estimator as follow:
+Occasionally, these algorithms have an analytical form. For example, if we are interested in the average outcome we may use the following estimator. 
 
 $$\begin{align*}
 &\mathcal{A}_1 :: \{ \mathcal{X} \times \mathcal{Y} \}^n \to \mathcal{R}\\ 
 &\mathcal{A}_1 \big(\{x_i, y_i \})_{i=1}^n\big) = \frac{1}{n} \sum y_i \\ 
 \end{align*}$$
+
+Or if we are interested in the linear approximation to the **CEF** we may use the following estimator. 
+
+$$\begin{align*}
+&\mathcal{A}_1 :: \{ \mathcal{X} \times \mathcal{Y} \}^n \to \mathcal{R}^p\\ 
+&\mathcal{A}_1 \big(\{x_i, y_i \})_{i=1}^n\big) = \big( X^TX)^{-1}X^TY \\ 
+\end{align*}$$
+
+
+
 
 #### Probability Space 
 ??? warning
