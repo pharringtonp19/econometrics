@@ -1,6 +1,20 @@
-!!! abstract 
 
-    In this note we introduce the fundamentals of the learning problem 
+!!! Abstract 
+
+    We're interested in the behavior/performance of Estimators/Algorithms 
+
+In applied microeconometrics where we are generally interested in the causal effect of some policy/intervention we use **estimators/algorithms** with the following signature. 
+
+$$\begin{align*}
+\mathcal{A}_1 :: \{ \mathcal{X} \times \mathcal{Y} \}^n \to \mathcal{R}\\ 
+\end{align*}$$
+
+For example, let's assume that we are interested in the average outcome. Then we can define the estimator as follow:
+
+$$\begin{align*}
+&\mathcal{A}_1 :: \{ \mathcal{X} \times \mathcal{Y} \}^n \to \mathcal{R}\\ 
+&\mathcal{A}_1 \big(\{x_i, y_i \})_{i=1}^n\big) = \frac{1}{n} \sum y_i \\ 
+\end{align*}$$
 
 #### Probability Space 
 ??? warning
@@ -32,7 +46,8 @@ $$\begin{align*}
 
 $$\begin{align*}
 &L :: \mathcal{H} \to \mathcal{R}_+ \\ 
-&L(h) := \underset{(x,y)\sim p}{\mathbb{E}} \big[l(h, x, y)\big]\end{align*}$$
+&L(h) := \underset{(x,y)\sim p}{\mathbb{E}} \big[l(h, x, y)\big] \\
+&L(h)= \int _{\mathcal{X} \times \mathcal{Y}}l(h, X, Y)d\mathbb{P} \end{align*}$$
 
 
 #### Empirical Risk 
@@ -43,17 +58,39 @@ $$
 &\hat{L}(\{x_i, y_i\}_{i=1}^n, \theta) = \frac{1}{n} \sum _i l(\theta, x_i, y_i)
 \end{align*}$$
 
-??? tip "Partial Evaluation" 
+??? info "Partial Evaluation: Expectation" 
 
     Partially evaluated at $\theta$, $\hat{L}$  is a random variable. Taking its expectation
 
     $$
     \begin{align*}
-    \mathbb{E}\big[ \hat{L} _{\theta}\big] &= \mathbb{E}\big[ \frac{1}{n} \sum _i l(\theta, x_i, y_i)\big] \\ 
+    \mathbb{E}\big[ \hat{L} _{\theta}\big] &= \mathbb{E}\Big[ \frac{1}{n} \sum _i l(\theta, x_i, y_i)\Big] \\ 
     &= \frac{1}{n} \sum _i \mathbb{E}\big[ l(\theta, x_i, y_i)\big] \\ 
     &= L(\theta) \end{align*}$$
 
-    But we are not really interested in this relationship, becuase $\hat{L}$ is not partially evaluated in practice. In practice, we use our training data to determine $\theta$. That is we have an algorithm $\mathcal{A}$. 
+??? info "Partial Evaluation: Variance" 
+
+
+    $$
+    \begin{align*}
+    \textrm{Var}(\hat{L} _{\theta})  &= \textrm{Var}\Big[ \frac{1}{n} \sum _i l(\theta, x_i, y_i)\Big] \\ 
+    &= \frac{1}{n^2} \sum _i \textrm{Var}\big[ l(\theta, x_i, y_i)\big] \\ 
+    &= \frac{\textrm{Var}\big[ l(\theta, x_i, y_i)\big]}{n}
+    \end{align*}$$
+
+??? tip "Partial Evaluation: Variance" 
+
+    Partially evaluated at $\theta$, $\hat{L}$  is a random variable. Taking its expectation
+
+    $$
+    \begin{align*}
+    \mathbb{E}\big[ \hat{L} _{\theta}\big] &= \mathbb{E}\Big[ \frac{1}{n} \sum _i l(\theta, x_i, y_i)\Big] \\ 
+    &= \frac{1}{n} \sum _i \mathbb{E}\big[ l(\theta, x_i, y_i)\big] \\ 
+    &= L(\theta) \end{align*}$$
+
+
+#### Hmm 
+But we are not really interested in this relationship, becuase $\hat{L}$ is not partially evaluated in practice. In practice, we use our training data to determine $\theta$. That is we have an algorithm $\mathcal{A}$. 
 
 #### Algorithm 
 
