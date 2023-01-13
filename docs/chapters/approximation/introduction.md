@@ -28,7 +28,7 @@ We may, though, be interested in more "complex" estimators that involve neural n
 $$\begin{align*}
 &\mathcal{A} :: \{ \mathcal{X} \times \mathcal{Y} \}^n \to \mathcal{R}\\ 
 &\mathcal{A} \big(\{x_i, y_i \})_{i=1}^n\big) = \sum f(\theta_1, x_i) - f(\theta_2, x_i) \\ 
-& \quad \textrm{where} \ \theta_i = \dots
+& \quad \textrm{where} \ \theta_i = m^*\big(\{x_i, y_i \})_{i=1}^n\big)
 \end{align*}$$
 
 ??? warning "To Do"
