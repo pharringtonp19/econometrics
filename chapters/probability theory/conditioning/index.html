@@ -86,6 +86,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#conditioning" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -828,6 +833,23 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    
+  
+    Conditioning
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -843,6 +865,45 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#conditioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conditioning
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#independence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Independence
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -962,6 +1023,9 @@
 
 
 
+  <h1>Conditioning</h1>
+
+<h3 id="conditioning"><strong>Conditioning</strong></h3>
 <p>Given a measurable space</p>
 <div class="arithmatex">\[\big(\Omega, \mathcal{F}\big)\]</div>
 <p>Let <span class="arithmatex">\(\mathcal{M}\)</span> be the set of probability measures defined on this space. Then conditioning can be defined as follows:</p>
@@ -972,6 +1036,11 @@
 <summary>To Do</summary>
 <p>Is it possible to encode the postivity requirement of <span class="arithmatex">\(A\)</span> into the signature of <span class="arithmatex">\(C\)</span>? Is this an example of a dependent type? As in, the set of possible events that we can condition on depends on the probability measure. </p>
 </details>
+<h3 id="independence"><strong>Independence</strong></h3>
+<p>Given a probability space</p>
+<div class="arithmatex">\[\big(\Omega, \mathcal{F}, \mathbb{P}\big)\]</div>
+<p><span class="arithmatex">\(A, B\)</span> are independent under <span class="arithmatex">\(\mathbb{P}\)</span> if </p>
+<div class="arithmatex">\[\mathbb{P}( A \cap B) = \mathbb{P}(A) \mathbb{P}(B)\]</div>
 
 
 

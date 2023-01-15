@@ -1027,7 +1027,12 @@
 
 <div class="admonition abstract">
 <p class="admonition-title">TLDR</p>
-<p>For both of these definitions, the underlying probability space can vary with <span class="arithmatex">\(n\)</span>!</p>
+<p>The defining feature of convergence is the restriction on the underlying probability space. </p>
+<ul>
+<li>In convergence in Law/distribution, we do not require <span class="arithmatex">\(X_n\)</span> and <span class="arithmatex">\(X\)</span> to be defined on the same probability space. </li>
+<li>In convergence in probability or expectation, we require that for each <span class="arithmatex">\(n\)</span>,  <span class="arithmatex">\(X_n\)</span> and <span class="arithmatex">\(X\)</span> are defined on the same probability space. i.e. they share the same probability space, but this probability space is allowed to change with <span class="arithmatex">\(n\)</span>. </li>
+<li>In convergence almost surley, the underlying probability space for <span class="arithmatex">\(X_n\)</span> and <span class="arithmatex">\(X\)</span> must be the same and fixed for all <span class="arithmatex">\(n\)</span>. </li>
+</ul>
 </div>
 <h3 id="convergence-in-distribution"><strong>Convergence in Distribution</strong></h3>
 <ul>
