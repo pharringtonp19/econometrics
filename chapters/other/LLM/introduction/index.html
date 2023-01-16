@@ -1116,10 +1116,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#conditional-distribution" class="md-nav__link">
+  <a href="#a-neural-probabilistic-language-model" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Conditional Distribution
+        A Neural Probabilistic Language Model
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-insights" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Insights
       
     </span>
   </a>
@@ -1176,6 +1187,12 @@
 
   <h1>Introduction</h1>
 
+<details class="info">
+<summary>References</summary>
+<ul>
+<li><a href="https://www.jmlr.org/papers/volume3/bengio03a/bengio03a.pdf">A Neural Probabilistic Language Model</a></li>
+</ul>
+</details>
 <h3 id="aim"><strong>Aim</strong></h3>
 <p>The aim is to "learn" <span class="arithmatex">\(\mathbb{P}\)</span>. </p>
 <div class="arithmatex">\[\Big(\{\textrm{Sequences of Words}\}, \mathcal{F}, \mathbb{P} \Big)\]</div>
@@ -1193,15 +1210,44 @@
 <summary>To Do</summary>
 <p>This should be made more exact</p>
 </details>
-<h3 id="conditional-distribution"><strong>Conditional Distribution</strong></h3>
+<h3 id="a-neural-probabilistic-language-model"><strong><a href="https://www.jmlr.org/papers/volume3/bengio03a/bengio03a.pdf">A Neural Probabilistic Language Model</a></strong></h3>
+<div class="admonition abstract">
+<p class="admonition-title">Essence</p>
+<ul>
+<li>transfer probability mass</li>
+<li>In the proposed model, it will so generalize because “similar” words are expected to have a similar feature vector, and because the probability function is a smooth function of these feature values, a small change in the features will induce a small change in the probability</li>
+</ul>
+</div>
 <p>We can construct the condition distribution as follows. </p>
 <ul>
 <li>First we introduce an embedding function. Given that our vocab is finite, we can represent this function as a matrix. i.e. <span class="arithmatex">\(h\)</span> is isomorphic to <span class="arithmatex">\(\theta \in {| \mathcal{V} | \times m}\)</span></li>
 </ul>
 <div class="arithmatex">\[h :: \mathcal{V} \to \mathcal{R}^p\]</div>
 <ul>
-<li>We introduce a function <span class="arithmatex">\(g\)</span> which maps subsequences of these embeddings into a conditional distribution</li>
+<li>
+<p>We introduce a function <span class="arithmatex">\(g\)</span> which maps subsequences of these embeddings into a conditional distribution</p>
+</li>
+<li>
+<p>Given this level of detail we could augment the signature of our model as follows:</p>
+</li>
 </ul>
+<div class="arithmatex">\[\textrm{Model} :: \textrm{Embedding Functions} \to \textrm{Forward Functions} \to \{\textrm{context}\} \to \mathbb{P}_{\mid \textrm{context}}\]</div>
+<details class="warning">
+<summary>To Do</summary>
+<p>What should the name of this forward function be?</p>
+</details>
+<h3 id="key-insights"><strong>Key Insights</strong></h3>
+<ul>
+<li>"In high dimensions, it is crucial to distribute probability mass where it matters rather than uniformly in all directions around each training point."<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></li>
+</ul>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p><a href="https://www.jmlr.org/papers/volume3/bengio03a/bengio03a.pdf">A Neural Probabilistic Language Model</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
 
 
