@@ -23,6 +23,9 @@ nav:
         - Conditioning: "chapters/probability theory/conditioning.md"
       - Programming: 
         - Introduction: "chapters/programming/introduction.md"
+      - Other:
+        - LLM:
+          - Introduction: "chapters/other/LLM/introduction.md"
 
 theme:
   name: material
