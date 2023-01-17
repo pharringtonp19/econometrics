@@ -901,6 +901,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Independence">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#events" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Events
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-sigma-algebras" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sub-\(\sigma\)-algebras
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1165,7 +1193,7 @@
 
   <h1>Conditioning</h1>
 
-<h3 id="conditioning"><strong>Conditioning</strong></h3>
+<h2 id="conditioning"><strong>Conditioning</strong></h2>
 <p>Given a measurable space</p>
 <div class="arithmatex">\[\big(\Omega, \mathcal{F}\big)\]</div>
 <details class="inline end note">
@@ -1178,7 +1206,10 @@
 <div class="arithmatex">\[\begin{align*}
 &amp;C :: \mathcal{M} \to \mathcal{F}_+ \to \mathcal{M} \\
 &amp; C \ \mathbb{P} \ A  \ B = \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(A)} \end{align*}\]</div>
-<h3 id="independence"><strong>Independence</strong></h3>
+<h2 id="independence"><strong>Independence</strong></h2>
+<p style="text-align: center;">The first question to ask is: independence of what?</p>
+
+<h3 id="events"><strong>Events</strong></h3>
 <p>Given a probability space</p>
 <div class="arithmatex">\[\big(\Omega, \mathcal{F}, \mathbb{P}\big)\]</div>
 <ul>
@@ -1196,10 +1227,16 @@
 <li>Independent if for any finite subset, the independent condition defined above holds</li>
 </ul>
 </li>
-<li>
-<p><strong><span class="arithmatex">\(\sigma\)</span>-algebra</strong></p>
-</li>
 </ul>
+<h3 id="sub-sigma-algebras"><strong>Sub-<span class="arithmatex">\(\sigma\)</span>-algebras</strong></h3>
+<ul>
+<li><strong>Two sub-<span class="arithmatex">\(\sigma\)</span>-algebras</strong>: <span class="arithmatex">\(\mathcal{F}_1, \mathcal{F}_2\)</span>  </li>
+</ul>
+<div class="arithmatex">\[\forall A_1 \in \mathcal{F}_1, \forall A_2 \in \mathcal{F}_2, \quad \mathbb{P}( A_1 \cap A_2) = \mathbb{P}(A_1) \mathbb{P}(A_2)\]</div>
+<ul>
+<li><strong>Arbitrary Collection of Sub-<span class="arithmatex">\(\sigma\)</span>-algebras</strong>: <span class="arithmatex">\(\{\mathcal{F}_i, i \in I\}\)</span></li>
+</ul>
+<p>Are independent if for any subset of <span class="arithmatex">\(\Omega\)</span> selected from any sub-<span class="arithmatex">\(\sigma\)</span>-algebras, that collection of subsets is indepdent as defined above</p>
 
 
 
