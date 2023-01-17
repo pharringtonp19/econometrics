@@ -1168,19 +1168,38 @@
 <h3 id="conditioning"><strong>Conditioning</strong></h3>
 <p>Given a measurable space</p>
 <div class="arithmatex">\[\big(\Omega, \mathcal{F}\big)\]</div>
+<details class="inline end note">
+<summary>Different Signature</summary>
+<p>If we had "rearranged" the signature of <span class="arithmatex">\(C\)</span> as follows: </p>
+<div class="arithmatex">\[C :: \mathcal{F}_+ \to \mathcal{M} \to \mathcal{M} \]</div>
+<p>Then <span class="arithmatex">\(C \  \Omega\)</span> would be the identity function</p>
+</details>
 <p>Let <span class="arithmatex">\(\mathcal{M}\)</span> be the set of probability measures defined on this space. Then conditioning can be defined as follows:</p>
 <div class="arithmatex">\[\begin{align*}
 &amp;C :: \mathcal{M} \to \mathcal{F}_+ \to \mathcal{M} \\
 &amp; C \ \mathbb{P} \ A  \ B = \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(A)} \end{align*}\]</div>
-<details class="warning">
-<summary>To Do</summary>
-<p>Is it possible to encode the postivity requirement of <span class="arithmatex">\(A\)</span> into the signature of <span class="arithmatex">\(C\)</span>? Is this an example of a dependent type? As in, the set of possible events that we can condition on depends on the probability measure. </p>
-</details>
 <h3 id="independence"><strong>Independence</strong></h3>
 <p>Given a probability space</p>
 <div class="arithmatex">\[\big(\Omega, \mathcal{F}, \mathbb{P}\big)\]</div>
-<p><span class="arithmatex">\(A, B\)</span> are independent under <span class="arithmatex">\(\mathbb{P}\)</span> if </p>
+<ul>
+<li><strong>Two Events</strong>: <span class="arithmatex">\(A, B\)</span> are independent under <span class="arithmatex">\(\mathbb{P}\)</span> if </li>
+</ul>
 <div class="arithmatex">\[\mathbb{P}( A \cap B) = \mathbb{P}(A) \mathbb{P}(B)\]</div>
+<ul>
+<li><strong>Finite Collection of Events</strong>: <span class="arithmatex">\(A_1, A_2, \dots, A_n\)</span> are independent if </li>
+</ul>
+<div class="arithmatex">\[\forall I_0 \subset \{1,2, \dots, n\}, \quad \mathbb{P}\big(\cap _{i \in I_0} A_i \big) = \prod _{i \in I_0}  \mathbb{P}(A_i)\]</div>
+<ul>
+<li>
+<p><strong>Arbitrary Collection of Events</strong>: <span class="arithmatex">\(\{A_i, i \in I\}\)</span></p>
+<ul>
+<li>Independent if for any finite subset, the independent condition defined above holds</li>
+</ul>
+</li>
+<li>
+<p><strong><span class="arithmatex">\(\sigma\)</span>-algebra</strong></p>
+</li>
+</ul>
 
 
 
