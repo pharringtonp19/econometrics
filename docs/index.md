@@ -1,10 +1,11 @@
 <h1 style="text-align: center;color:#404065;font-weight:bold;">Econometrics</h1>
 
-<p style="text-align: center;">Applied Econometrics is a highly personalized endevour </p>
+<p style="text-align: center;">Applied Econometrics is a highly personalized endevour</p>
 
-<h2 style="text-align: left;color:#404065;font-weight:bold;">Summary</h2>
 
-Applied econometrics is fundamentally about **interpretation** -- how to interpret the result of a statistical procedure in a given context. Generally, though, there isn't a "valid" or correct interpretation. Applied econometrics is not a math class! Rather, it's much more similair to a literature or art-history class[^1]. 
+<h2 style="text-align: left;color:#404065;font-weight:bold;">Introduction</h2>
+
+Applied econometrics is fundamentally about **interpretation** -- how to interpret the result of a statistical procedure in a given context. Generally, though, there isn't a "valid" or correct interpretation. This type of work is actually quite similair to a litterature or art-history class[^1], where the aim is to develop/enhance your ability to interpret different works/results. 
 
 The general setup is as follows: we have beliefs about the world; we have beliefs about how a statical procedure behaves under certain conditions' the statistical procedure is applied to a data set providing use with numerical "results" which ultimately lead to new beliefs about the world. 
 
