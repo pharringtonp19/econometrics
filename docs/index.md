@@ -9,6 +9,12 @@ Applied econometrics is fundamentally about **interpretation** -- how to interpr
 
 The general setup is as follows: we have beliefs about the world; we have beliefs about how a statical procedure behaves under certain conditions' the statistical procedure is applied to a data set providing use with numerical "results" which ultimately lead to new beliefs about the world. 
 
+<figure markdown>
+  ![Image title](./figs/the_process.png){ width="500" }
+</figure>
+
+
+
 This is a highly personal process because your new beliefs depend on both your original beliefs about the world and your beliefs about the statistical procedure. **Elaborate Here**
 
 <h2 style="text-align: left;color:#404065;font-weight:bold;">Components</h2>
