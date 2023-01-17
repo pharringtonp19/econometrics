@@ -1,4 +1,4 @@
-### **Conditioning**
+## **Conditioning**
 
 Given a measurable space
 
@@ -19,10 +19,13 @@ $$\begin{align*}
 & C \ \mathbb{P} \ A  \ B = \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(A)} \end{align*}$$
 
 
+## **Independence**
+
+<p style="text-align: center;">The first question to ask is: independence of what?</p>
 
 
 
-### **Independence**
+### **Events**
 
 Given a probability space
 
@@ -40,5 +43,13 @@ $$\forall I_0 \subset \{1,2, \dots, n\}, \quad \mathbb{P}\big(\cap _{i \in I_0} 
 
     - Independent if for any finite subset, the independent condition defined above holds
 
-- **$\sigma$-algebra**
+### **Sub-$\sigma$-algebras**
+
+- **Two sub-$\sigma$-algebras**: $\mathcal{F}_1, \mathcal{F}_2$  
+
+$$\forall A_1 \in \mathcal{F}_1, \forall A_2 \in \mathcal{F}_2, \quad \mathbb{P}( A_1 \cap A_2) = \mathbb{P}(A_1) \mathbb{P}(A_2)$$
+
+- **Arbitrary Collection of Sub-$\sigma$-algebras**: $\{\mathcal{F}_i, i \in I\}$
+
+Are independent if for any subset of $\Omega$ selected from any sub-$\sigma$-algebras, that collection of subsets is indepdent as defined above
 
