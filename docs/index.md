@@ -17,12 +17,17 @@ Learning from data, especially finite data where the estimand of interest has a 
 
 #### Models 
 
-We will never assume that the relationship is linear. 
+We will never assume that the relationship is linear and moreover, we're not going to be centrally focused on fitting linear models
 
 <figure markdown>
   ![Image title](./figs/linear_issues.png){ width="900" }
   Under selection on observables, linear regression can perform poorly: Reproduced <a href="https://github.com/pharringtonp19/econometrics/blob/main/notebooks/approximation/Linear_Issues.ipynb">Here</a>
 </figure>
+
+
+We'll work from a more general setup 
+
+$$Y_i(D) = f(X_i, D) + \varepsilon_i(D)$$
 
 
 <h2 style="text-align: left;color:#404065;font-weight:bold;">Components</h2>
