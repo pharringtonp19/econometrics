@@ -12,13 +12,13 @@
         <meta name="author" content="Patrick Power">
       
       
-        <link rel="canonical" href="https://pharringtonp19.github.io/econometrics/chapters/approximation/asymptotics/">
+        <link rel="canonical" href="https://pharringtonp19.github.io/econometrics/chapters/probability%20theory/clusters/">
       
       
-        <link rel="prev" href="../introduction/">
+        <link rel="prev" href="../conditioning/">
       
       
-        <link rel="next" href="../curse_of_dimensionality/">
+        <link rel="next" href="../../programming/introduction/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>Asymptotics - Econometrics</title>
+        <title>Clusters - Econometrics</title>
       
     
     
@@ -86,6 +86,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#propensity-score" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -115,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Asymptotics
+              Clusters
             
           </span>
         </div>
@@ -209,7 +214,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../introduction/" class="md-tabs__link md-tabs__link--active">
+        <a href="../../approximation/introduction/" class="md-tabs__link md-tabs__link--active">
           
   
   Topics
@@ -383,8 +388,6 @@
                 
   
   
-    
-  
   
     
     
@@ -401,15 +404,15 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
+        <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
         
-          <label class="md-nav__link" for="__nav_2_1" tabindex="0" aria-expanded="true">
+          <label class="md-nav__link" for="__nav_2_1" tabindex="0" aria-expanded="false">
             
   
   <span class="md-ellipsis">
@@ -443,7 +446,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../introduction/" class="md-nav__link">
+      <a href="../../approximation/introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -467,16 +470,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../approximation/asymptotics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -491,7 +487,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -503,7 +498,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../curse_of_dimensionality/" class="md-nav__link">
+      <a href="../../approximation/curse_of_dimensionality/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -529,7 +524,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../kernels/" class="md-nav__link">
+      <a href="../../approximation/kernels/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -555,7 +550,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../clusters/" class="md-nav__link">
+      <a href="../../approximation/clusters/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -725,6 +720,8 @@
                 
   
   
+    
+  
   
     
     
@@ -739,15 +736,15 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" checked>
         
-          <label class="md-nav__link" for="__nav_2_3" tabindex="0" aria-expanded="false">
+          <label class="md-nav__link" for="__nav_2_3" tabindex="0" aria-expanded="true">
             
   
   <span class="md-ellipsis">
@@ -781,7 +778,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../probability%20theory/introduction/" class="md-nav__link">
+      <a href="../introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -807,7 +804,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../probability%20theory/convergence/" class="md-nav__link">
+      <a href="../convergence/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -833,7 +830,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../probability%20theory/conditioning/" class="md-nav__link">
+      <a href="../conditioning/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -857,9 +854,33 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../probability%20theory/clusters/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    
+  
+    Clusters
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -874,6 +895,35 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#propensity-score" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Propensity Score
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1130,7 +1180,17 @@
 
 
 
+  <h1>Clusters</h1>
 
+<h3 id="propensity-score"><strong>Propensity Score</strong></h3>
+<p>The propensity score is observable: </p>
+<div class="arithmatex">\[\pi(X_i) = \mathbb{P}(D_i = 1 \mid X_i)\]</div>
+<p>That is, given access to the following probability space, we can compute the probability measure. </p>
+<div class="arithmatex">\[\big( \mathcal{X}\times \mathcal{D} \times \mathcal{Y}, \mathcal{F}, \mathcal{P} \big)\]</div>
+<details class="warning">
+<summary>To Do</summary>
+<p>Add in the details </p>
+</details>
 
 
 
