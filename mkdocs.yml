@@ -20,6 +20,7 @@ nav:
       - Probability Theory: 
         - Introduction: "chapters/probability theory/introduction.md"
         - Convergence: "chapters/probability theory/convergence.md"
+        - Independence: "chapters/probability theory/independence.md"
         - Conditioning: "chapters/probability theory/conditioning.md"
         - Clusters: "chapters/probability theory/clusters.md"
       - Programming: 
