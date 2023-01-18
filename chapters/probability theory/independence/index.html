@@ -12,13 +12,13 @@
         <meta name="author" content="Patrick Power">
       
       
-        <link rel="canonical" href="https://pharringtonp19.github.io/econometrics/chapters/approximation/introduction/">
+        <link rel="canonical" href="https://pharringtonp19.github.io/econometrics/chapters/probability%20theory/independence/">
       
       
-        <link rel="prev" href="../../..">
+        <link rel="prev" href="../convergence/">
       
       
-        <link rel="next" href="../asymptotics/">
+        <link rel="next" href="../conditioning/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>Introduction - Econometrics</title>
+        <title>Independence - Econometrics</title>
       
     
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#probability-space" class="md-skip">
+        <a href="#motivation" class="md-skip">
           Skip to content
         </a>
       
@@ -120,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introduction
+              Independence
             
           </span>
         </div>
@@ -181,7 +181,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="./" class="md-tabs__link md-tabs__link--active">
+        <a href="../../approximation/introduction/" class="md-tabs__link md-tabs__link--active">
           
   
   Topics
@@ -355,8 +355,6 @@
                 
   
   
-    
-  
   
     
     
@@ -373,15 +371,15 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
+        <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
         
-          <label class="md-nav__link" for="__nav_2_1" tabindex="0" aria-expanded="true">
+          <label class="md-nav__link" for="__nav_2_1" tabindex="0" aria-expanded="false">
             
   
   <span class="md-ellipsis">
@@ -413,33 +411,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    
-  
-    Introduction
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../approximation/introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -454,115 +428,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#probability-space" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <span class="md-typeset">
-          Probability Space
-        </span>
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#function-space-hypothesis-class-model-class" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <span class="md-typeset">
-          Function Space/ Hypothesis Class/ Model Class
-        </span>
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#loss-function" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <span class="md-typeset">
-          Loss Function
-        </span>
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#population-risk" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <span class="md-typeset">
-          Population Risk
-        </span>
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#empirical-risk" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <span class="md-typeset">
-          Empirical Risk
-        </span>
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hmm" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <span class="md-typeset">
-          Hmm
-        </span>
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#algorithm" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <span class="md-typeset">
-          Algorithm
-        </span>
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -574,7 +439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../asymptotics/" class="md-nav__link">
+      <a href="../../approximation/asymptotics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -600,7 +465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../curse_of_dimensionality/" class="md-nav__link">
+      <a href="../../approximation/curse_of_dimensionality/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -626,7 +491,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../kernels/" class="md-nav__link">
+      <a href="../../approximation/kernels/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -652,7 +517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../clusters/" class="md-nav__link">
+      <a href="../../approximation/clusters/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -822,6 +687,8 @@
                 
   
   
+    
+  
   
     
     
@@ -838,15 +705,15 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" checked>
         
-          <label class="md-nav__link" for="__nav_2_3" tabindex="0" aria-expanded="false">
+          <label class="md-nav__link" for="__nav_2_3" tabindex="0" aria-expanded="true">
             
   
   <span class="md-ellipsis">
@@ -880,7 +747,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../probability%20theory/introduction/" class="md-nav__link">
+      <a href="../introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -906,7 +773,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../probability%20theory/convergence/" class="md-nav__link">
+      <a href="../convergence/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -930,9 +797,33 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../probability%20theory/independence/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    
+  
+    Independence
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -947,6 +838,76 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#motivation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          <strong>Motivation</strong>
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#events" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          <strong>Events</strong>
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sub-sigma-algebras" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          <strong>Sub-<span class="arithmatex">\(\sigma\)</span>-algebras</strong>
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#random-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          <strong>Random Variables</strong>
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -958,7 +919,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../probability%20theory/conditioning/" class="md-nav__link">
+      <a href="../conditioning/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -984,7 +945,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../probability%20theory/clusters/" class="md-nav__link">
+      <a href="../clusters/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1255,133 +1216,82 @@
 
 
 
-  <h1>Introduction</h1>
+  <h1>Independence</h1>
 
-<div class="admonition abstract">
-<p class="admonition-title">Abstract</p>
-<p>We're interested in the behavior/performance of Estimators/Algorithms </p>
+<p style="text-align: center;">The first question to ask is: independence of what?</p>
+
+<h3 id="motivation"><strong>Motivation</strong></h3>
+<p>In many contexts, you will often here that treatment is independent of the potential outcomes. While you probably have an intuitive sense of what this means, it can be helpful to formally define this. To start, let's consider the following probability space: </p>
+<div class="arithmatex">\[\Big(\mathcal{Y} \times \mathcal{Y} \times \mathcal{D}, \mathcal{F}, \mathbb{P}\Big)\]</div>
+<p>Given this probability space, we can then define the random variables of interest as follows: </p>
+<div class="grid cards">
+<ul>
+<li>
+<p><strong><span class="arithmatex">\(Y_0\)</span></strong></p>
+<div class="arithmatex">\[\begin{align*}
+&amp;Y_{i0}:: \Omega \to \mathcal{R} \\ 
+&amp;Y_{i0} \ (y_0 \ \_ \ \_) =  y_0 
+\end{align*}\]</div>
+</li>
+<li>
+<p><strong><span class="arithmatex">\(Y_1\)</span></strong></p>
+<div class="arithmatex">\[\begin{align*}
+&amp;Y_{i1}:: \Omega \to \mathcal{R} \\ 
+&amp;Y_{i1} \ (\_ \ y_1 \ \_) =  y_1
+\end{align*}\]</div>
+</li>
+<li>
+<p><strong><span class="arithmatex">\(D_i\)</span></strong></p>
+<div class="arithmatex">\[\begin{align*}
+&amp;D_{i}:: \Omega \to \mathcal{R} \\ 
+&amp;D_{i} \ (\_ \ \_ \ d) =  d
+\end{align*}\]</div>
+</li>
+<li>
+<p><strong><span class="arithmatex">\(Y_i\)</span></strong></p>
+<div class="arithmatex">\[\begin{align*}
+&amp;Y_{i}:: \Omega \to \mathcal{R} \\ 
+&amp;Y_{i} \ (y_0 \ y_1 \ d) =  dy_1 + (1-d)y_0
+\end{align*}\]</div>
+</li>
+</ul>
 </div>
-<p>In applied microeconometrics, where we are generally interested in the causal effect of some policy/intervention, we use <strong>estimators</strong> with the following signature. </p>
-<div class="arithmatex">\[\begin{align*}
-\mathcal{A} :: \{ \mathcal{X} \times \mathcal{Y} \}^n \to \mathcal{R}^p\\ 
-\end{align*}\]</div>
-<p>Occasionally, these estimators will have an analytical form. For example, if we are interested in the average outcome we may use the following estimator. </p>
-<div class="arithmatex">\[\begin{align*}
-&amp;\mathcal{A} :: \{ \mathcal{X} \times \mathcal{Y} \}^n \to \mathcal{R}\\ 
-&amp;\mathcal{A} \big(\{x_i, y_i \})_{i=1}^n\big) = \frac{1}{n} \sum y_i \\ 
-\end{align*}\]</div>
-<p>Or if we are interested in the linear approximation to the <strong>CEF</strong> we may use the following estimator. </p>
-<div class="arithmatex">\[\begin{align*}
-&amp;\mathcal{A} :: \{ \mathcal{X} \times \mathcal{Y} \}^n \to \mathcal{R}^p\\ 
-&amp;\mathcal{A} \big(\{x_i, y_i \})_{i=1}^n\big) = \big( X^TX)^{-1}X^TY \\ 
-\end{align*}\]</div>
-<p>We may, though, be interested in more "complex" estimators that involve neural networks.</p>
-<div class="arithmatex">\[\begin{align*}
-&amp;\mathcal{A} :: \{ \mathcal{X} \times \mathcal{Y} \}^n \to \mathcal{R}\\ 
-&amp;\mathcal{A} \big(\{x_i, y_i \})_{i=1}^n\big) = \sum f(\theta_1, x_i) - f(\theta_2, x_i) \\ 
-&amp; \quad \textrm{where} \ \theta_i = m^*\big(\{x_i, y_i \})_{i=1}^n\big)
-\end{align*}\]</div>
-<details class="warning">
-<summary>To Do</summary>
-<p>Make the connection to kernel methods</p>
-</details>
-<h4 id="probability-space">Probability Space</h4>
-<details class="warning">
-<summary>Warning</summary>
-<p>Is the Borel Sigma Algebra well defined here? Should we add restrictions on <span class="arithmatex">\(\mathcal{X}, \mathcal{Y}\)</span>?</p>
-</details>
-<div class="arithmatex">\[\Big( \mathcal{X} \times \mathcal{Y}, \mathcal{B}(\mathcal{X} \times \mathcal{Y}), \mathbb{P}\Big)\]</div>
-<h4 id="function-space-hypothesis-class-model-class">Function Space/ Hypothesis Class/ Model Class</h4>
-<details class="warning">
-<summary>Warning</summary>
-<p>What additional restrictions should we place on <span class="arithmatex">\(\mathcal{H}\)</span>?</p>
-</details>
-<div class="arithmatex">\[ \mathcal{H} := \{h \mid h : \mathcal{X} \to \mathcal{Y} \}\]</div>
-<h4 id="loss-function">Loss Function</h4>
-<details class="warning">
-<summary>Warning</summary>
-<p>Make note on parameterization</p>
-</details>
-<div class="arithmatex">\[\begin{align*}
-&amp;l : \mathcal{H} \to \mathcal{X} \to \mathcal{Y} \\
-&amp;l(h, x, y) = (y - h(x))^2
-\end{align*}\]</div>
-<h4 id="population-risk">Population Risk</h4>
-<div class="arithmatex">\[\begin{align*}
-&amp;L :: \mathcal{H} \to \mathcal{R}_+ \\ 
-&amp;L(h) := \underset{(x,y)\sim p}{\mathbb{E}} \big[l(h, x, y)\big] \\
-&amp;L(h)= \int _{\mathcal{X} \times \mathcal{Y}}l(h, X, Y)d\mathbb{P} \end{align*}\]</div>
-<h4 id="empirical-risk">Empirical Risk</h4>
-<div class="arithmatex">\[
-\begin{align*}
-&amp;\hat{L} :: \{X, Y\}^n \to \Theta \to \mathcal{R}_+ \\
-&amp;\hat{L}(\{x_i, y_i\}_{i=1}^n, \theta) = \frac{1}{n} \sum _i l(\theta, x_i, y_i)
-\end{align*}\]</div>
-<details class="info">
-<summary>Partial Evaluation: Expectation</summary>
-<p>Partially evaluated at <span class="arithmatex">\(\theta\)</span>, <span class="arithmatex">\(\hat{L}\)</span>  is a random variable. Taking its expectation</p>
-<div class="arithmatex">\[
-\begin{align*}
-\mathbb{E}\big[ \hat{L} _{\theta}\big] &amp;= \mathbb{E}\Big[ \frac{1}{n} \sum _i l(\theta, x_i, y_i)\Big] \\ 
-&amp;= \frac{1}{n} \sum _i \mathbb{E}\big[ l(\theta, x_i, y_i)\big] \\ 
-&amp;= L(\theta) \end{align*}\]</div>
-</details>
-<details class="info">
-<summary>Partial Evaluation: Variance</summary>
-<div class="arithmatex">\[
-\begin{align*}
-\textrm{Var}(\hat{L} _{\theta})  &amp;= \textrm{Var}\Big[ \frac{1}{n} \sum _i l(\theta, x_i, y_i)\Big] \\ 
-&amp;= \frac{1}{n^2} \sum _i \textrm{Var}\big[ l(\theta, x_i, y_i)\big] \\ 
-&amp;= \frac{\textrm{Var}\big[ l(\theta, x_i, y_i)\big]}{n}
-\end{align*}\]</div>
-</details>
-<details class="tip">
-<summary>Partial Evaluation: Variance</summary>
-<p>Partially evaluated at <span class="arithmatex">\(\theta\)</span>, <span class="arithmatex">\(\hat{L}\)</span>  is a random variable. Taking its expectation</p>
-<div class="arithmatex">\[
-\begin{align*}
-\mathbb{E}\big[ \hat{L} _{\theta}\big] &amp;= \mathbb{E}\Big[ \frac{1}{n} \sum _i l(\theta, x_i, y_i)\Big] \\ 
-&amp;= \frac{1}{n} \sum _i \mathbb{E}\big[ l(\theta, x_i, y_i)\big] \\ 
-&amp;= L(\theta) \end{align*}\]</div>
-</details>
-<h4 id="hmm">Hmm</h4>
-<p>But we are not really interested in this relationship, becuase <span class="arithmatex">\(\hat{L}\)</span> is not partially evaluated in practice. In practice, we use our training data to determine <span class="arithmatex">\(\theta\)</span>. That is we have an algorithm <span class="arithmatex">\(\mathcal{A}\)</span>. </p>
-<h4 id="algorithm">Algorithm</h4>
-<div class="arithmatex">\[
-\begin{align*}
-\mathcal{A} :: \{\mathcal{X}, \mathcal{Y}\}^n \to \Theta 
-\end{align*}
-\]</div>
+<p>We can say that </p>
+<div class="arithmatex">\[D_i \perp Y_{i0} \iff \sigma(D) \perp \sigma(Y_0)\]</div>
+<h3 id="events"><strong>Events</strong></h3>
+<p>Given a probability space</p>
+<div class="arithmatex">\[\big(\Omega, \mathcal{F}, \mathbb{P}\big)\]</div>
 <ul>
-<li>Empirical Risk Minimization</li>
+<li><strong>Two Events</strong>: <span class="arithmatex">\(A, B\)</span> are independent under <span class="arithmatex">\(\mathbb{P}\)</span> if </li>
 </ul>
-<div class="arithmatex">\[
-\begin{align*}
-&amp;\textrm{ERM} :: \{X, Y\}^n \to \Theta  \\
-&amp;\textrm{ERM}(\{x_i, y_i\}_{i=1}^n) = \underset{\theta \in \Theta}{\textrm{minimize}} \ \hat{L}(\{x_i, y_i\}_{i=1}^n, \theta)  
-\end{align*}\]</div>
+<div class="arithmatex">\[\mathbb{P}( A \cap B) = \mathbb{P}(A) \mathbb{P}(B)\]</div>
+<ul>
+<li><strong>Finite Collection of Events</strong>: <span class="arithmatex">\(A_1, A_2, \dots, A_n\)</span> are independent if </li>
+</ul>
+<div class="arithmatex">\[\forall I_0 \subset \{1,2, \dots, n\}, \quad \mathbb{P}\big(\cap _{i \in I_0} A_i \big) = \prod _{i \in I_0}  \mathbb{P}(A_i)\]</div>
 <ul>
 <li>
-<p>Consistency: </p>
-<div class="arithmatex">\[\mathbb{P}_n ( \| \mathcal{A}_n - \theta _0 \| &gt; \varepsilon) \to 0  \]</div>
-</li>
-<li>
-<p>Which is just a random variable. We can evaluate it as follows: </p>
-<div class="arithmatex">\[
-\begin{align*}
-\mathbb{E} \big[ L \circ \mathcal{A} \big]
-\end{align*}
-\]</div>
-</li>
-<li>
-<p>Excess Risk:</p>
+<p><strong>Arbitrary Collection of Events</strong>: <span class="arithmatex">\(\{A_i, i \in I\}\)</span></p>
+<ul>
+<li>Independent if for any finite subset, the independent condition defined above holds</li>
+</ul>
 </li>
 </ul>
-<div class="arithmatex">\[ 
-\begin{align*}
-&amp;E :: \mathcal{H} \to \mathcal{R}_+ \\
-&amp;E(h) = L(h) - \underset{g \in \mathcal{H}}{\inf} L(g)
-\end{align*}\]</div>
+<h3 id="sub-sigma-algebras"><strong>Sub-<span class="arithmatex">\(\sigma\)</span>-algebras</strong></h3>
+<ul>
+<li><strong>Two sub-<span class="arithmatex">\(\sigma\)</span>-algebras</strong>: <span class="arithmatex">\(\mathcal{F}_1, \mathcal{F}_2\)</span>  </li>
+</ul>
+<div class="arithmatex">\[\forall A_1 \in \mathcal{F}_1, \forall A_2 \in \mathcal{F}_2, \quad \mathbb{P}( A_1 \cap A_2) = \mathbb{P}(A_1) \mathbb{P}(A_2)\]</div>
+<ul>
+<li><strong>Arbitrary Collection of Sub-<span class="arithmatex">\(\sigma\)</span>-algebras</strong>: <span class="arithmatex">\(\{\mathcal{F}_i, i \in I\}\)</span></li>
+</ul>
+<p>Are independent if for any subset of <span class="arithmatex">\(\Omega\)</span> selected from any sub-<span class="arithmatex">\(\sigma\)</span>-algebras, that collection of subsets is indepdent as defined above</p>
+<h3 id="random-variables"><strong>Random Variables</strong></h3>
+<p><span class="arithmatex">\(X, Y\)</span> are independent if the <span class="arithmatex">\(\sigma\)</span>-algebras generated by these random variables are independent as defined above</p>
+<ul>
+<li><span class="arithmatex">\(\sigma\)</span>-algebra generated by the random variable <span class="arithmatex">\(X\)</span></li>
+</ul>
+<div class="arithmatex">\[\sigma(X) := \{A \in \mathcal{F} \mid A = X^{-1}(B) \  \textrm{for} \ B \in \mathcal{B}(\mathcal{R})\}\]</div>
 
 
 
