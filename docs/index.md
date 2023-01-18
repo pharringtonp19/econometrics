@@ -9,10 +9,19 @@ Applied econometrics is fundamentally about **interpretation** -- how to interpr
 
 #### Learning from Data
 
-Learning from data, especially finite data where the estimand of interest has a causal interpretation is a highly personalized process. The general setup of process is reflected visually below. We have beliefs about the world; we have beliefs about how a statical procedure behaves under certain conditions; the statistical procedure is applied to a data set providing use with numerical "results" which ultimately shape our new beliefs about the world. 
+Learning from data, especially finite data where the estimand of interest has a causal interpretation is a highly personalized process. The general setup of the process is reflected visually below. We have beliefs about the world; we have beliefs about how a statical procedure behaves under certain conditions; the statistical procedure is applied to a data set providing use with numerical "results" which ultimately shape our new beliefs about the world. 
 
 <figure markdown>
   ![Image title](./figs/the_process.png){ width="500" }
+</figure>
+
+#### Models 
+
+We will never assume that the relationship is linear. 
+
+<figure markdown>
+  ![Image title](./figs/linear_issues.png){ width="900" }
+  Under selection on observables, linear regression can perform poorly: Reproduced <a href="https://github.com/pharringtonp19/econometrics/blob/main/notebooks/approximation/Linear_Issues.ipynb">Here</a>
 </figure>
 
 
@@ -59,5 +68,4 @@ Learning from data, especially finite data where the estimand of interest has a 
 
 </div>
 
-[^1]: I have never taken an art-history class so I might be wrong about this! 
-
+ 
