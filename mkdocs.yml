@@ -21,6 +21,7 @@ nav:
         - Introduction: "chapters/probability theory/introduction.md"
         - Convergence: "chapters/probability theory/convergence.md"
         - Conditioning: "chapters/probability theory/conditioning.md"
+        - Clusters: "chapters/probability theory/clusters.md"
       - Programming: 
         - Introduction: "chapters/programming/introduction.md"
       - Other:
