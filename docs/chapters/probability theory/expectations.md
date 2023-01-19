@@ -14,7 +14,6 @@ The lebesgue intergral is simply the following where $\lambda$ denotes the lebes
 $$\mathbb{I} \ \lambda$$
 
 
-
 #### **Linearity**
 
 You have probably heard in various classes that integration is a linear function. What people mean by this is that the following higher-order function is linear 
