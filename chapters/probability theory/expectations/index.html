@@ -12,25 +12,31 @@
         <meta name="author" content="Patrick Power">
       
       
+        <link rel="canonical" href="https://pharringtonp19.github.io/econometrics/chapters/probability%20theory/expectations/">
       
+      
+        <link rel="prev" href="../introduction/">
+      
+      
+        <link rel="next" href="../convergence/">
       
       
         
       
       
-      <link rel="icon" href="/econometrics/assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.3+insiders-4.27.1">
     
     
       
-        <title>Econometrics</title>
+        <title>Expectation - Econometrics</title>
       
     
     
-      <link rel="stylesheet" href="/econometrics/assets/stylesheets/main.38fd6ec5.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.38fd6ec5.min.css">
       
         
-        <link rel="stylesheet" href="/econometrics/assets/stylesheets/palette.2505c338.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
       
       
   
@@ -57,7 +63,7 @@
       
     
     
-    <script>__md_scope=new URL("/econometrics/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -80,6 +86,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#introduction" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -90,7 +101,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/econometrics/." title="Econometrics" class="md-header__button md-logo" aria-label="Econometrics" data-md-component="logo">
+    <a href="../../.." title="Econometrics" class="md-header__button md-logo" aria-label="Econometrics" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -109,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Expectation
             
           </span>
         </div>
@@ -142,7 +153,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/econometrics/." class="md-tabs__link">
+        <a href="../../.." class="md-tabs__link">
           
   
     
@@ -157,6 +168,8 @@
       
         
 
+  
+
 
 
 
@@ -168,7 +181,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/econometrics/chapters/approximation/introduction/" class="md-tabs__link">
+        <a href="../../approximation/introduction/" class="md-tabs__link md-tabs__link--active">
           
   
   Topics
@@ -206,7 +219,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/econometrics/." title="Econometrics" class="md-nav__button md-logo" aria-label="Econometrics" data-md-component="logo">
+    <a href="../../.." title="Econometrics" class="md-nav__button md-logo" aria-label="Econometrics" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -242,7 +255,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/econometrics/." class="md-nav__link ">
+            <a href="../../.." class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -284,6 +297,8 @@
       
   
   
+    
+  
   
     
     
@@ -300,15 +315,15 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
         
-          <label class="md-nav__link" for="__nav_2" tabindex="0" aria-expanded="false">
+          <label class="md-nav__link" for="__nav_2" tabindex="0" aria-expanded="true">
             
   
   <span class="md-ellipsis">
@@ -398,7 +413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/econometrics/chapters/approximation/introduction/" class="md-nav__link">
+      <a href="../../approximation/introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -424,7 +439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/econometrics/chapters/approximation/asymptotics/" class="md-nav__link">
+      <a href="../../approximation/asymptotics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -450,7 +465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/econometrics/chapters/approximation/curse_of_dimensionality/" class="md-nav__link">
+      <a href="../../approximation/curse_of_dimensionality/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -476,7 +491,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/econometrics/chapters/approximation/kernels/" class="md-nav__link">
+      <a href="../../approximation/kernels/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -502,7 +517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/econometrics/chapters/approximation/clusters/" class="md-nav__link">
+      <a href="../../approximation/clusters/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -588,7 +603,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/econometrics/chapters/optimization/introduction/" class="md-nav__link">
+      <a href="../../optimization/introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -614,7 +629,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/econometrics/chapters/optimization/differentiation/" class="md-nav__link">
+      <a href="../../optimization/differentiation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -640,7 +655,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/econometrics/chapters/optimization/overparam/" class="md-nav__link">
+      <a href="../../optimization/overparam/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -672,6 +687,8 @@
                 
   
   
+    
+  
   
     
     
@@ -690,15 +707,15 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" checked>
         
-          <label class="md-nav__link" for="__nav_2_3" tabindex="0" aria-expanded="false">
+          <label class="md-nav__link" for="__nav_2_3" tabindex="0" aria-expanded="true">
             
   
   <span class="md-ellipsis">
@@ -732,7 +749,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/econometrics/chapters/probability%20theory/introduction/" class="md-nav__link">
+      <a href="../introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -756,9 +773,33 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="/econometrics/chapters/probability%20theory/expectations/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    
+  
+    Expectation
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -773,6 +814,82 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          <strong>Introduction</strong>
+        </span>
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lebesgue-integral" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          <strong>Lebesgue Integral</strong>
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linearity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          <strong>Linearity</strong>
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-across-probability-spaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          <strong>Working Across Probability Spaces</strong>
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -784,7 +901,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/econometrics/chapters/probability%20theory/convergence/" class="md-nav__link">
+      <a href="../convergence/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -810,7 +927,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/econometrics/chapters/probability%20theory/independence/" class="md-nav__link">
+      <a href="../independence/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -836,7 +953,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/econometrics/chapters/probability%20theory/conditioning/" class="md-nav__link">
+      <a href="../conditioning/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -862,7 +979,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/econometrics/chapters/probability%20theory/clusters/" class="md-nav__link">
+      <a href="../clusters/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -944,7 +1061,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/econometrics/chapters/programming/introduction/" class="md-nav__link">
+      <a href="../../programming/introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1074,7 +1191,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/econometrics/chapters/other/LLM/introduction/" class="md-nav__link">
+      <a href="../../other/LLM/introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1129,8 +1246,37 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+
+  <h1>Expectation</h1>
+
+<h3 id="introduction"><strong>Introduction</strong></h3>
+<p>Integration can be thought of as a function that takes a probability measure, a set, and a random variable </p>
+<div class="arithmatex">\[\begin{align*}
+&amp;\mathbb{I} :: \mathcal{M} \to \mathcal{F} \to \{\Omega \to \mathcal{R} \} \\ 
+&amp;\mathbb{I} \ \mathbb{P} \ A \ X = \int _A X d\mathbb{P}
+\end{align*}\]</div>
+<h4 id="lebesgue-integral"><strong>Lebesgue Integral</strong></h4>
+<p>The lebesgue intergral is simply the following where <span class="arithmatex">\(\lambda\)</span> denotes the lebesgue measure</p>
+<div class="arithmatex">\[\mathbb{I} \ \lambda\]</div>
+<h4 id="linearity"><strong>Linearity</strong></h4>
+<p>You have probably heard in various classes that integration is a linear function. What people mean by this is that the following higher-order function is linear </p>
+<div class="arithmatex">\[\mathbb{I} \ \mathbb{P} \ A \]</div>
+<h3 id="working-across-probability-spaces"><strong>Working Across Probability Spaces</strong></h3>
+<div class="arithmatex">\[\int _A fd\mathbb{P} = \int_{f(A)} x d\mathbb{P}_f\]</div>
+<details class="warning">
+<summary>To Do</summary>
+<p>is <span class="arithmatex">\(f(A)\)</span> a measurable set??</p>
+</details>
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -1168,12 +1314,12 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "/econometrics/", "features": ["navigation.tabs", "navigation.indexes", "toc.integrate", "navigation.top"], "search": "/econometrics/assets/javascripts/workers/search.f236eb64.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.indexes", "toc.integrate", "navigation.top"], "search": "../../../assets/javascripts/workers/search.f236eb64.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="/econometrics/assets/javascripts/bundle.abfe3e55.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.abfe3e55.min.js"></script>
       
-        <script src="/econometrics/_static/mathjax.js"></script>
+        <script src="../../../_static/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
