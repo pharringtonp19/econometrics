@@ -43,9 +43,9 @@ Given this probability space, we can then define the random variables of interes
 
 </div>
 
-We can say that 
+We can say that treatment is indepdent of the potential outcome if the corresponding $\sigma$-algebras are independent. More intuitively, this is equivalent (as shown [here](https://youtu.be/gHcAbLam5h0?list=PLbMVogVj5nJQqGHrpAloTec_lOKsG-foc&t=526)).
 
-$$D_i \perp Y_{i0} \iff \sigma(D) \perp \sigma(Y_0)$$
+$$\forall B_1,B_2 \in \mathcal{B}(\mathcal{R}), \quad \mathbb{P}(D_i \in B_1, Y_{i0} \in B_2) = \mathbb{P}(D_i \in B_1)\mathbb{P}(Y_{i0} \in B_2)$$
 
  
 
