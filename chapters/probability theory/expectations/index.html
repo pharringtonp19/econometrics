@@ -18,7 +18,7 @@
         <link rel="prev" href="../introduction/">
       
       
-        <link rel="next" href="../convergence/">
+        <link rel="next" href="../independence/">
       
       
         
@@ -707,6 +707,8 @@
       
         
       
+        
+      
     
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
@@ -903,32 +905,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../convergence/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Convergence
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../independence/" class="md-nav__link">
         
   
@@ -962,6 +938,58 @@
     
   
     Conditioning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conditional_expectation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Conditional Expectation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../convergence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Convergence
   
 
     
@@ -1283,15 +1311,15 @@
 <h3 id="introduction"><strong>Introduction</strong></h3>
 <p>Integration can be thought of as a function that takes a probability measure, a set, and a random variable </p>
 <div class="arithmatex">\[\begin{align*}
-&amp;\mathbb{I} :: \mathcal{M} \to \mathcal{F} \to \{\Omega \to \mathcal{R} \} \\ 
-&amp;\mathbb{I} \ \mathbb{P} \ A \ X = \int _A X d\mathbb{P}
+&amp;\mathcal{I} :: \mathcal{M} \to \mathcal{F} \to \{\Omega \to \mathcal{R} \} \to \mathcal{R} \cup \{ \pm \infty\}\\ 
+&amp;\mathcal{I} \ \mathbb{P} \ A \ X = \int _A X d\mathbb{P}
 \end{align*}\]</div>
 <h4 id="lebesgue-integral"><strong>Lebesgue Integral</strong></h4>
 <p>The lebesgue intergral is simply the following where <span class="arithmatex">\(\lambda\)</span> denotes the lebesgue measure</p>
-<div class="arithmatex">\[\mathbb{I} \ \lambda\]</div>
+<div class="arithmatex">\[\mathcal{I} \ \lambda\]</div>
 <h4 id="linearity"><strong>Linearity</strong></h4>
 <p>You have probably heard in various classes that integration is a linear function. What people mean by this is that the following higher-order function is linear </p>
-<div class="arithmatex">\[\mathbb{I} \ \mathbb{P} \ A \]</div>
+<div class="arithmatex">\[\mathcal{I} \ \mathcal{P} \ A \]</div>
 <h3 id="working-across-probability-spaces"><strong>Working Across Probability Spaces</strong></h3>
 <div class="arithmatex">\[\int _A fd\mathbb{P} = \int_{f(A)} x d\mathbb{P}_f\]</div>
 <details class="warning">

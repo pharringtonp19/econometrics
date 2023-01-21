@@ -12,13 +12,13 @@
         <meta name="author" content="Patrick Power">
       
       
-        <link rel="canonical" href="https://pharringtonp19.github.io/econometrics/chapters/probability%20theory/key_theorems/">
+        <link rel="canonical" href="https://pharringtonp19.github.io/econometrics/chapters/probability%20theory/conditional_expectation/">
       
       
-        <link rel="prev" href="../clusters/">
+        <link rel="prev" href="../conditioning/">
       
       
-        <link rel="next" href="../../programming/introduction/">
+        <link rel="next" href="../convergence/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>Key Theorems - Econometrics</title>
+        <title>Conditional Expectation - Econometrics</title>
       
     
     
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Key Theorems
+              Conditional Expectation
             
           </span>
         </div>
@@ -850,9 +850,16 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../conditional_expectation/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -867,6 +874,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -928,16 +936,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../key_theorems/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -952,7 +953,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1209,15 +1209,15 @@
 
 
 
-<details class="note">
-<summary>Gilvenko-Cantelli</summary>
-<p>The claim is that <span class="arithmatex">\(\underset{x}{\textrm{sup}}\ g\)</span> (defined below!) converges "almost surely" to <span class="arithmatex">\(0\)</span>.</p>
+<p>Although the CEF is random variable, it's not "defined" pointwise. </p>
 <div class="arithmatex">\[\begin{align*}
-&amp;g :: \mathcal{X} \to \Omega \to \mathcal{R} \\
-&amp;g \ x \ \omega = F_n(x, \omega) - F(x) \\ \\ 
-&amp;\underset{x}{\textrm{sup}}\ g :: \Omega \to \mathcal{R}
+&amp;\mathbb{E}[Y|X] :: \Omega \to \mathcal{R} \\ 
+&amp; \mathcal{I} \ \mathbb{P} \ A \ Y = \mathcal{I} \ \mathbb{P} \ A \  \mathbb{E}[Y|X] \quad \forall \ A \in \sigma(X)
 \end{align*}\]</div>
-</details>
+<p>The law of iteration of expectations is part of the definition</p>
+<div class="arithmatex">\[\begin{align*}
+&amp; \mathcal{I} \ \mathbb{P} \ \Omega \ Y = \mathcal{I} \ \mathbb{P} \ \Omega \  \mathbb{E}[Y|X]
+\end{align*}\]</div>
 
 
 
