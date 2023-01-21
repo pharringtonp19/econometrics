@@ -20,10 +20,12 @@ nav:
       - Probability Theory: 
         - Introduction: "chapters/probability theory/introduction.md"
         - Expectation: "chapters/probability theory/expectations.md"
-        - Convergence: "chapters/probability theory/convergence.md"
         - Independence: "chapters/probability theory/independence.md"
         - Conditioning: "chapters/probability theory/conditioning.md"
+        - Conditional Expectation: "chapters/probability theory/conditional_expectation.md"
+        - Convergence: "chapters/probability theory/convergence.md"
         - Clusters: "chapters/probability theory/clusters.md"
+        - Key Theorems: "chapters/probability theory/key_theorems.md"
       - Programming: 
         - Introduction: "chapters/programming/introduction.md"
       - Other:
