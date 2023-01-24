@@ -33,6 +33,6 @@ suc n ! = (suc n) * (n !)
 min : ℕ → ℕ → ℕ
 min zero _ = zero 
 min _ zero = zero
-min (suc a) (suc b) = min a b 
+min (suc a) (suc b) = suc (min a b) 
 ```
 
