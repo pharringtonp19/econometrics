@@ -42,5 +42,11 @@ map : {X Y : Set} → (X → Y) → List X → List Y
 map f [] = [] 
 map f (x :: xs) f x :: map f xs 
 ```
+
+#### Problem 6 
+```agda 
+filter : {X : Set} → (p : X → Bool) → List X → List X 
+filter p [] = [] 
+filter p (x :: xs) = if (p x) then (x :: filter p xs) else (filter p xs)
 ```
 
