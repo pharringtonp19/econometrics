@@ -36,3 +36,11 @@ min _ zero = zero
 min (suc a) (suc b) = suc (min a b) 
 ```
 
+#### Problem 5 
+```agda 
+map : {X Y : Set} → (X → Y) → List X → List Y 
+map f [] = [] 
+map f (x :: xs) f x :: map f xs 
+```
+```
+
