@@ -3,6 +3,19 @@
 ### Questions
   - what does $\forall \{A\}$ mean?
   - Right of the collon?
+  - `Fin n`
+
+
+### Main Result
+```
+data Vec (X : Set) : \bN -> Set where 
+  [] : Vec X zero 
+  _::_ : \forall {n} -> Vec X n -> Vec X (suc n) 
+```
+
+```
+data Fin ?
+```
 
 ```
 _!!_ : \forall {A} -> List A -> \bN -> A 
@@ -14,9 +27,4 @@ _!!_ : \forall {A} -> List A -> \bN -> A
 ### Observations
 - notice the similarity between `[]` and `nothing`
 
-```
-data Vec (X : Set) : \bN -> Set where 
-  [] : Vec X zero 
-  _::_ : \forall {n} -> Vec X n -> Vec X (suc n) 
-```
   
