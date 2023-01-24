@@ -1,5 +1,4 @@
-
-Lines outside of code blocks are ignored by Agda.
+Agda functions take types as arguments. This makes sense to me. 
 
 \begin{code}
 const : (A : Set) -> (B : Set) -> A -> B -> A
