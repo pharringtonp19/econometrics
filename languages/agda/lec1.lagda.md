@@ -12,3 +12,9 @@ data List (X : Set) : Set where
   _::_ : X -> List X -> List X
 ```
 
+```
+append : {X : Set} -> List X -> List X -> List X 
+append [] ys = ys 
+append (x :: xs) ys = x :: append xs ys --the data promise
+```
+
