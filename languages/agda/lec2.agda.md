@@ -12,3 +12,7 @@ _!!_ : \forall {A} -> List A -> \bN -> A
 
 ### Observations
 - notice the similarity between `[]` and `nothing`
+
+```
+data Vec (X : Set) : (n : \bN) -> Set where 
+  
