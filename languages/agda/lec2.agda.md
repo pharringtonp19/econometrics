@@ -1,3 +1,5 @@
+> [Legitimize](https://youtu.be/37ENUdO8IVU?t=1202) failure
+
 ### Questions
   - what does $\forall \{A\}$ mean?
 
