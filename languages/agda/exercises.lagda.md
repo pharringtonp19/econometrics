@@ -47,6 +47,8 @@ map f (x :: xs) f x :: map f xs
 ```agda 
 filter : {X : Set} → (p : X → Bool) → List X → List X 
 filter p [] = [] 
-filter p (x :: xs) = if (p x) then (x :: filter p xs) else (filter p xs)
+filter p (x :: xs) = if (p x) then (x :: ys) else ys 
+  where 
+    ys = filter p xs
 ```
 
