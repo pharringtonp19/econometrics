@@ -7,3 +7,6 @@ _!!_ : \forall {A} -> List A -> \bN -> A
 (x :: xs) !! zero = x
 (x :: xs) !! suc n = xs !! n 
 ```
+
+### Observations
+- notice the similarity between `[]` and `nothing`
