@@ -3,4 +3,7 @@
 
 ```
 _!!_ : \forall {A} -> List A -> \bN -> A 
+[] !! n = ? 
+(x :: xs) !! zero = x
+(x :: xs) !! suc n = xs !! n 
 ```
