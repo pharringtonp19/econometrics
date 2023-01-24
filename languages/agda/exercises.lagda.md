@@ -25,7 +25,14 @@ n ^ suc m = n * n ^ m
 
 _! : ℕ → ℕ
 zero ! = zero 
-suc n ! = suc n * n !
+suc n ! = (suc n) * (n !)
 ```
 
 #### Problem 4
+```agda 
+min : ℕ → ℕ → ℕ
+min zero _ = zero 
+min _ zero = zero
+min (suc a) (suc b) = min a b 
+```
+
