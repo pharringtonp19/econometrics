@@ -2,6 +2,7 @@
 
 ### Questions
   - what does $\forall \{A\}$ mean?
+  - Right of the collon?
 
 ```
 _!!_ : \forall {A} -> List A -> \bN -> A 
@@ -14,5 +15,8 @@ _!!_ : \forall {A} -> List A -> \bN -> A
 - notice the similarity between `[]` and `nothing`
 
 ```
-data Vec (X : Set) : (n : \bN) -> Set where 
+data Vec (X : Set) : \bN -> Set where 
+  [] : Vec X zero 
+  _::_ : \forall {n} -> Vec X n -> Vec X (suc n) 
+```
   
