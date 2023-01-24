@@ -1,3 +1,5 @@
+> [The](https://youtu.be/3FZDy6zX_h4?t=2869) unreasonable effectiveness of honesty
+
 Agda functions take types as arguments. This makes sense to me. 
 
 ```
