@@ -1028,6 +1028,8 @@
       
         
       
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -1087,6 +1089,88 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_4_2" type="checkbox" id="__nav_2_4_2" >
+        
+          <label class="md-nav__link" for="__nav_2_4_2" tabindex="0" aria-expanded="false">
+            
+  
+  <span class="md-ellipsis">
+    
+  
+    Category Theory
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" aria-label="Category Theory" data-md-level="3">
+          <label class="md-nav__title" for="__nav_2_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Category Theory
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/category%20theory/natural%20transformations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Natural Transformations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1264,18 +1348,16 @@
   <h1>Conditioning</h1>
 
 <h2 id="conditioning"><strong>Conditioning</strong></h2>
-<p>Given a measurable space</p>
-<div class="arithmatex">\[\big(\Omega, \mathcal{F}\big)\]</div>
-<details class="inline end note">
-<summary>Different Signature</summary>
-<p>If we had "rearranged" the signature of <span class="arithmatex">\(C\)</span> as follows: </p>
-<div class="arithmatex">\[C :: \mathcal{F}_+ \to \mathcal{M} \to \mathcal{M} \]</div>
-<p>Then <span class="arithmatex">\(C \  \Omega\)</span> would be the identity function</p>
-</details>
-<p>Let <span class="arithmatex">\(\mathcal{M}\)</span> be the set of probability measures defined on this space. Then conditioning can be defined as follows:</p>
+<p>Given a measurable space, <span class="arithmatex">\((\Omega, \mathcal{F})\)</span>, let <span class="arithmatex">\(\mathcal{M}\)</span> be the set of probability measures defined on this space. Then conditioning can be defined as follows:</p>
 <div class="arithmatex">\[\begin{align*}
 &amp;C :: \mathcal{M} \to \mathcal{F}_+ \to \mathcal{M} \\
 &amp; C \ \mathbb{P} \ A  \ B = \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(A)} \end{align*}\]</div>
+<p>Two things to note here: </p>
+<ol>
+<li>Notice the dependent structure between <span class="arithmatex">\(\mathcal{M}\)</span> and <span class="arithmatex">\(\mathcal{F}_+\)</span>. The measure restricts the set of events that we can condition on. </li>
+<li>Notice also that if we rearrange the signature of the function, as done below, <span class="arithmatex">\(C \  \Omega\)</span> would be the identity function.</li>
+</ol>
+<div class="arithmatex">\[C ::\mathcal{F}_+ \to \mathcal{M} \to \mathcal{M}\]</div>
 
 
 
