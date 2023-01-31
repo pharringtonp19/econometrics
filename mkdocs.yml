@@ -28,6 +28,8 @@ nav:
         - Key Theorems: "chapters/probability theory/key_theorems.md"
       - Programming: 
         - Introduction: "chapters/programming/introduction.md"
+        - Category Theory: 
+          - Natural Transformations: "chapters/programming/category theory/natural transformations.md"
       - Other:
         - LLM:
           - Introduction: "chapters/other/LLM/introduction.md"
