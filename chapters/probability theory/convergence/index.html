@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#convergence-in-distribution" class="md-skip">
+        <a href="#motivation" class="md-skip">
           Skip to content
         </a>
       
@@ -937,11 +937,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#convergence-in-distribution" class="md-nav__link">
+  <a href="#motivation" class="md-nav__link">
     <span class="md-ellipsis">
       
         <span class="md-typeset">
-          <strong>Convergence in Distribution</strong>
+          <strong>Motivation</strong>
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convergence-in-distribution-or-law" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          <strong>Convergence in Distribution (or Law) </strong>
         </span>
       
     </span>
@@ -1360,16 +1373,25 @@
 
   <h1>Convergence</h1>
 
-<div class="admonition abstract">
-<p class="admonition-title">TLDR</p>
+<blockquote>
+<p>Reference: STATS 203 - Large Sample Theory </p>
+</blockquote>
+<details class="abstract" open="open">
+<summary>TLDR</summary>
 <p>The defining feature of convergence is the restriction on the underlying probability space. </p>
 <ul>
 <li>In convergence in Law/distribution, we do not require <span class="arithmatex">\(X_n\)</span> and <span class="arithmatex">\(X\)</span> to be defined on the same probability space. </li>
 <li>In convergence in probability or expectation, we require that for each <span class="arithmatex">\(n\)</span>,  <span class="arithmatex">\(X_n\)</span> and <span class="arithmatex">\(X\)</span> are defined on the same probability space. i.e. they share the same probability space, but this probability space is allowed to change with <span class="arithmatex">\(n\)</span>. </li>
 <li>In convergence almost surley, the underlying probability space for <span class="arithmatex">\(X_n\)</span> and <span class="arithmatex">\(X\)</span> must be the same and fixed for all <span class="arithmatex">\(n\)</span>. </li>
 </ul>
-</div>
-<h3 id="convergence-in-distribution"><strong>Convergence in Distribution</strong></h3>
+</details>
+<h3 id="motivation"><strong>Motivation</strong></h3>
+<p>We are interested in the following function</p>
+<div class="arithmatex">\[ \begin{align*}
+&amp;J :: \{n\} \to P(\Omega_n) \to (\theta^{d(n)} \to \mathcal{R}) \to \\
+&amp;J \ \Omega_n \ \mathbb{P}_n \ (\hat{g}_n \circ \hat{\theta}_n)
+\end{align*}\]</div>
+<h3 id="convergence-in-distribution-or-law"><strong>Convergence in Distribution (or Law) </strong></h3>
 <ul>
 <li>A random variable <span class="arithmatex">\(X_n\)</span> convergences in distribution (or in law )to <span class="arithmatex">\(X\)</span> when the corresponding sequence of CDFs converge "pointwise" to the CDF
 of <span class="arithmatex">\(X\)</span></li>
@@ -1377,6 +1399,19 @@ of <span class="arithmatex">\(X\)</span></li>
 <div class="arithmatex">\[\begin{align}
 X_n \to_D X \implies F_{X_n} \to F_X 
 \end{align}\]</div>
+<details class="note" open="open">
+<summary>Helly-Bray Theorem</summary>
+<details class="abstract" open="open">
+<summary>TLDR</summary>
+<p>If the parameters of our model converge in distribution or law, then we have an asymptotically unbiased estimate.</p>
+</details>
+<p>Let <span class="arithmatex">\(\theta_n \to_D \theta\)</span>. Let <span class="arithmatex">\(g\)</span> be a continuous and bounded function. Then: </p>
+<div class="arithmatex">\[I \ \Omega_1 \ \mathcal{P}_n \ (g \circ \theta_n) \to I \ \Omega_2 \ \mathcal{P} \ (g \circ \theta)\]</div>
+<p>Note, if we define our estimator <span class="arithmatex">\(\hat{\beta}_n\)</span> as follows. </p>
+<div class="arithmatex">\[\hat{\beta}_n := g \circ \theta_n = \int f(\theta_n, X) d\mathbb{P}_X\]</div>
+<p>Then this theorem tells us that </p>
+<div class="arithmatex">\[\int \hat{\beta}_n d\mathbb{P}_n \to \beta\]</div>
+</details>
 <h3 id="convergence-in-probability"><strong>Convergence in Probability</strong></h3>
 <blockquote>
 <p>If the limit is a random variable, then we care aboout the joint distribution!</p>

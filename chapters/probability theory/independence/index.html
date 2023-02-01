@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#motivation" class="md-skip">
+        <a href="#events" class="md-skip">
           Skip to content
         </a>
       
@@ -859,19 +859,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#motivation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <span class="md-typeset">
-          <strong>Motivation</strong>
-        </span>
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#events" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1386,46 +1373,6 @@
 
   <h1>Independence</h1>
 
-<p style="text-align: center;">The first question to ask is: independence of what?</p>
-
-<h3 id="motivation"><strong>Motivation</strong></h3>
-<p>In many contexts, you will often here that treatment is independent of the potential outcomes. While you probably have an intuitive sense of what this means, it can be helpful to formally define this. To start, let's consider the following probability space: </p>
-<div class="arithmatex">\[\Big(\mathcal{Y} \times \mathcal{Y} \times \mathcal{D}, \mathcal{F}, \mathbb{P}\Big)\]</div>
-<p>Given this probability space, we can then define the random variables of interest as follows: </p>
-<div class="grid cards">
-<ul>
-<li>
-<p><strong><span class="arithmatex">\(Y_0\)</span></strong></p>
-<div class="arithmatex">\[\begin{align*}
-&amp;Y_{i0}:: \Omega \to \mathcal{R} \\ 
-&amp;Y_{i0} \ (y_0 \ \_ \ \_) =  y_0 
-\end{align*}\]</div>
-</li>
-<li>
-<p><strong><span class="arithmatex">\(Y_1\)</span></strong></p>
-<div class="arithmatex">\[\begin{align*}
-&amp;Y_{i1}:: \Omega \to \mathcal{R} \\ 
-&amp;Y_{i1} \ (\_ \ y_1 \ \_) =  y_1
-\end{align*}\]</div>
-</li>
-<li>
-<p><strong><span class="arithmatex">\(D_i\)</span></strong></p>
-<div class="arithmatex">\[\begin{align*}
-&amp;D_{i}:: \Omega \to \mathcal{R} \\ 
-&amp;D_{i} \ (\_ \ \_ \ d) =  d
-\end{align*}\]</div>
-</li>
-<li>
-<p><strong><span class="arithmatex">\(Y_i\)</span></strong></p>
-<div class="arithmatex">\[\begin{align*}
-&amp;Y_{i}:: \Omega \to \mathcal{R} \\ 
-&amp;Y_{i} \ (y_0 \ y_1 \ d) =  dy_1 + (1-d)y_0
-\end{align*}\]</div>
-</li>
-</ul>
-</div>
-<p>We can say that treatment is indepdent of the potential outcome if the corresponding <span class="arithmatex">\(\sigma\)</span>-algebras are independent. More intuitively, this is equivalent (as shown <a href="https://youtu.be/gHcAbLam5h0?list=PLbMVogVj5nJQqGHrpAloTec_lOKsG-foc&amp;t=526">here</a>).</p>
-<div class="arithmatex">\[\forall B_1,B_2 \in \mathcal{B}(\mathcal{R}), \quad \mathbb{P}(D_i \in B_1, Y_{i0} \in B_2) = \mathbb{P}(D_i \in B_1)\mathbb{P}(Y_{i0} \in B_2)\]</div>
 <h3 id="events"><strong>Events</strong></h3>
 <p>Given a probability space</p>
 <div class="arithmatex">\[\big(\Omega, \mathcal{F}, \mathbb{P}\big)\]</div>
