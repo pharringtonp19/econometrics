@@ -32,6 +32,7 @@ $$Y_i(D) = f(X_i, D) + \varepsilon_i(D)$$
 
 <h2 style="text-align: left;color:#404065;font-weight:bold;">Components</h2>
 
+
 <div class="grid cards" markdown>
 
 -   __Approximation__
