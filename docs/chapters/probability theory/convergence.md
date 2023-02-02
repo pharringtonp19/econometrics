@@ -57,5 +57,16 @@ $$\begin{align}
 \end{align}$$
 
 
+### **Applications**
+
+#### **Weak Law of Large Numbers** 
+
+Proof given [here](https://youtu.be/VNSf9NcEwRA?list=PLo4jXE-LdDTS5BYqea-LcHdtjKwVcepP7&t=192)
+
+Let $X_1, \dots, X_n$ be a family of i.i.d random variables with a finite second moment. Then 
+
+$$\underset{n \to \infty}{\lim} \mathbb{E}\Big[\Big( \frac{X_1 + \dots + X_n}{n} - \mathbb{E}[X]\Big)^2\Big] = 0$$
+
+
 
 
