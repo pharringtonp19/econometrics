@@ -15,6 +15,10 @@
         <link rel="canonical" href="https://pharringtonp19.github.io/econometrics/chapters/probability%20theory/inference/">
       
       
+        <link rel="prev" href="../convergence/">
+      
+      
+        <link rel="next" href="../clusters/">
       
       
         
@@ -81,6 +85,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#the-inference-ladder" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -159,6 +168,8 @@
       
         
 
+  
+
 
 
 
@@ -170,7 +181,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../approximation/introduction/" class="md-tabs__link">
+        <a href="../../approximation/introduction/" class="md-tabs__link md-tabs__link--active">
           
   
   Topics
@@ -286,6 +297,8 @@
       
   
   
+    
+  
   
     
     
@@ -302,15 +315,15 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
         
-          <label class="md-nav__link" for="__nav_2" tabindex="0" aria-expanded="false">
+          <label class="md-nav__link" for="__nav_2" tabindex="0" aria-expanded="true">
             
   
   <span class="md-ellipsis">
@@ -674,6 +687,8 @@
                 
   
   
+    
+  
   
     
     
@@ -694,17 +709,19 @@
       
         
       
+        
+      
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" checked>
         
-          <label class="md-nav__link" for="__nav_2_3" tabindex="0" aria-expanded="false">
+          <label class="md-nav__link" for="__nav_2_3" tabindex="0" aria-expanded="true">
             
   
   <span class="md-ellipsis">
@@ -883,6 +900,100 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    
+  
+    Inference
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Inference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-inference-ladder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          <strong>The Inference Ladder</strong>
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partial-convergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          <strong>Partial Convergence</strong>
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1275,9 +1386,30 @@
 
 
 
-<ul>
-<li>the root n consistent part is needed to ensure to tha taylor expansion "works"? </li>
-</ul>
+  <h1>Inference</h1>
+
+<!-- - the root n consistent part is needed to ensure to tha taylor expansion "works"?  -->
+
+<h3 id="the-inference-ladder"><strong>The Inference Ladder</strong></h3>
+<p>Our estimator can be defined via the following components:</p>
+<div class="arithmatex">\[\begin{align*}\theta_n &amp;:: \Omega_n \to \mathcal{R}^{d(n)} \\ \\ 
+f_n &amp;:: \mathcal{R}^{d(n)}  \to \mathcal{X} \to \mathcal{R} \\ \\ 
+\gamma _n &amp;:: (\mathcal{X} \to \mathcal{R}) \to \Omega_n \to \mathcal{R} \end{align*}\]</div>
+<p>Our estimator is constructed by composing these elements as follows: </p>
+<div class="arithmatex">\[\begin{align*}\theta_n &amp;:: \Omega_n \to \mathcal{R}^{d(n)} \\ \\ 
+f_n \circ \theta_n &amp;:: \Omega_n \to \mathcal{X} \to \mathcal{R} \\ \\ 
+\gamma _n \circ f_n \circ \theta_n &amp;:: \Omega_n \to \Omega_n \to \mathcal{R} \end{align*}\]</div>
+<details class="tip" open="open">
+<summary>Random Function(als)</summary>
+<p>A random variable has the following type signature: </p>
+<div class="arithmatex">\[Z :: \Omega \to \mathcal{R}\]</div>
+<p>A random function as the following type signature: </p>
+<div class="arithmatex">\[Z :: \Omega \to \mathcal{X} \to \mathcal{R}\]</div>
+<p>A random funtional as the following type signature: </p>
+<div class="arithmatex">\[Z :: \Omega \to (\mathcal{X} \to \mathcal{R}) \to \mathcal{R}\]</div>
+<p>From this, we observe that <span class="arithmatex">\(f_n \circ \theta_n\)</span> is a <strong>random function</strong> and that <span class="arithmatex">\(\gamma _n\)</span> is a <strong>random functional</strong></p>
+</details>
+<h3 id="partial-convergence"><strong>Partial Convergence</strong></h3>
 
 
 

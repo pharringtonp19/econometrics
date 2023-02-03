@@ -18,7 +18,7 @@
         <link rel="prev" href="../conditional_expectation/">
       
       
-        <link rel="next" href="../clusters/">
+        <link rel="next" href="../inference/">
       
       
         
@@ -709,6 +709,8 @@
       
         
       
+        
+      
     
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
@@ -975,10 +977,68 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          <strong>Applications</strong>
+        </span>
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Applications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#weak-law-of-large-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          <strong>Weak Law of Large Numbers</strong>
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inference/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Inference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -1422,6 +1482,11 @@ X_n \to_D X \implies F_{X_n} \to F_X
 <div class="arithmatex">\[\begin{align}
 \underset{n \to \infty}{\lim}\mathbb{P}(\|X_n - X \| &gt; \varepsilon)= 0
 \end{align}\]</div>
+<h3 id="applications"><strong>Applications</strong></h3>
+<h4 id="weak-law-of-large-numbers"><strong>Weak Law of Large Numbers</strong></h4>
+<p>Proof given <a href="https://youtu.be/VNSf9NcEwRA?list=PLo4jXE-LdDTS5BYqea-LcHdtjKwVcepP7&amp;t=192">here</a></p>
+<p>Let <span class="arithmatex">\(X_1, \dots, X_n\)</span> be a family of i.i.d random variables with a finite second moment. Then </p>
+<div class="arithmatex">\[\underset{n \to \infty}{\lim} \mathbb{E}\Big[\Big( \frac{X_1 + \dots + X_n}{n} - \mathbb{E}[X]\Big)^2\Big] = 0\]</div>
 
 
 
