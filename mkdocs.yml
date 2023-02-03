@@ -24,6 +24,7 @@ nav:
         - Conditioning: "chapters/probability theory/conditioning.md"
         - Conditional Expectation: "chapters/probability theory/conditional_expectation.md"
         - Convergence: "chapters/probability theory/convergence.md"
+        - Inference: "chapters/probability theory/inference.md"
         - Clusters: "chapters/probability theory/clusters.md"
         - Key Theorems: "chapters/probability theory/key_theorems.md"
       - Programming: 
