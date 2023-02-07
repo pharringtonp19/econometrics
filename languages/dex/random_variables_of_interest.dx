@@ -1,57 +1,70 @@
 
 
-'### Motivation 
-In some contexts, the estimand, $\beta$, can be expressed the application of a functional, $\gamma$, to the cummulative distribution function, $F$.
+'### Set-Up 
+In some contexts, the estimand, $\beta$, can be expressed the application of a functional, $\gamma$, to the measure, $\mathbb{P}$.
 
 '$$ \begin{aligned}
 &\gamma :: {\mathcal{X} \to [0,1]} \to \mathcal{R}  \\\\
-&\beta = \gamma \ F\end{aligned}$$
+&\beta = \gamma \ \mathbb{P}\end{aligned}$$
 
-'A seemingly natural estimator would be to compose the empirical CDF, $\hat{F}_n$, with the functional $\gamma$.
+'A seemingly natural estimator would be to compose the empirical CDF, $\hat{\mathbb{P}}_n$, with the functional $\gamma$.
 
 '$$ \begin{aligned}
-&\hat{F}_n :: {\Omega _n \to \mathcal{X} \to [0,1]} \\\\
-&\hat{\beta} = \gamma \circ  \hat{F}_n :: \Omega_n \to \mathcal{R}\end{aligned}$$
+&\hat{\mathbb{P}}_n :: {\Omega _n \to \mathcal{X} \to [0,1]} \\\\
+&\hat{\beta} = \gamma \circ  \hat{\mathbb{P}}_n :: \Omega_n \to \mathcal{R}\end{aligned}$$
 
-'A nice feature of working in `dex` is that the code follows from the math. 
 
-'##### Composition
+'### Structure
 
 def (.*.) {a b c} (f : (b -> c)) (g : (a -> b)) : (a -> c) = 
     \x. f $ g x 
 
-def Integrate (f: Float -> Float) (cdf : Float -> Float): Float =  
-    xs = linspace (Fin 1000) (-3.0) 3.0
-    mean for i. (f xs.i) * (cdf xs.i)
+data Interval  = 
+    AsInterval {lower: Float & upper: Float}
 
-'##### Empirical CDF 
-
-def empirical_cdf (n : Nat ) (key: Key) (x : Float): Float = 
+def empirical_measure (n : Nat ) (key: Key) (interval:Interval ) : Float = 
     xs : (Fin n => Float) = arb key 
-    total = sum for i.  b_to_f (xs.i <= x)
-    total / (n_to_f n)
+    (AsInterval I') = interval
+    l = get_at #lower I'
+    u = get_at #upper I' 
+    mean for i. b_to_f $ (xs.i >= l) && (xs.i <= u)
 
-'##### Functional 
+def integrate (n: Nat) (llim: Float) (ulim: Float) (f : Float -> Float) (measure : Interval -> Float) = 
+    xs = linspace (Fin n) llim ulim 
+    delta = (ulim - llim) / (n_to_f n)
+    sum for i. (f xs.i) * (measure (AsInterval {lower = xs.i, upper = xs.i + delta}))
 
-def functional (target: Float -> Float) (f: Float -> Float) (cdf: Float -> Float) : Float = 
-    xs = linspace (Fin 1000) (-3.0) 3.0
-    Integrate (\x. (\y. y * y) ((target x) - (f x))) cdf
+def test_measure (I: Interval) : Float =
+    (AsInterval I') = I
+    l = get_at #lower I'
+    u = get_at #upper I' 
+    u - l
 
-'##### Estimator
+def functional (target: Float -> Float) (f: Float -> Float) (measure:Interval -> Float) : Float = 
+    g = \x. (\y. y*y) ((target x) - (f x))
+    integrate 1000 (-3.0) (3.0) g measure 
 
-estimator =  (functional (\x. x*x) (\x. x)) .*. (empirical_cdf 100)  
 
-:t estimator
 
-'##### Simulate 
+mykey = new_key 2 
+measure = empirical_measure 1000 mykey 
+-- integrate 1000 0.0 1.0 (\x. 1.0) test_measure 
+
+rv1 = (functional (\x. 2*x) (\x. x)) .*. (empirical_measure 1000)
+
+rv2 = (functional (\x. 3*x) (\x. x)) .*. (empirical_measure 1000)
+
+
+
+'### Simulation 
 
 key = new_key 1
+keys =  split_key key :: Fin 10=>Key
+mean $ map rv1 keys 
+mean $ map rv2 keys 
 
--- cdf = empirical_cdf 100 key 
--- Integrate (\x. x) cdf
-keys =  split_key key :: Fin 1000=>Key
-zs = map estimator keys 
-mean zs
+
+
 
 
 -- :html show_plot $ xy_plot xs ys
