@@ -1,0 +1,11 @@
+import plot
+
+'The constant function (already defined in the [prelude](https://google-research.github.io/dex-lang/prelude.html#s-12)!)
+
+def myconst {a b}  (x: a) (_: b) : a = 
+    x 
+
+
+
+
+

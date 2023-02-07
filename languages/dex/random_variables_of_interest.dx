@@ -1,0 +1,57 @@
+
+
+'### Motivation 
+In some contexts, the estimand, $\beta$, can be expressed the application of a functional, $\gamma$, to the cummulative distribution function, $F$.
+
+'$$ \begin{aligned}
+&\gamma :: {\mathcal{X} \to [0,1]} \to \mathcal{R}  \\\\
+&\beta = \gamma \ F\end{aligned}$$
+
+'A seemingly natural estimator would be to compose the empirical CDF, $\hat{F}_n$, with the functional $\gamma$.
+
+'$$ \begin{aligned}
+&\hat{F}_n :: {\Omega _n \to \mathcal{X} \to [0,1]} \\\\
+&\hat{\beta} = \gamma \circ  \hat{F}_n :: \Omega_n \to \mathcal{R}\end{aligned}$$
+
+'A nice feature of working in `dex` is that the code follows from the math. 
+
+'##### Composition
+
+def (.*.) {a b c} (f : (b -> c)) (g : (a -> b)) : (a -> c) = 
+    \x. f $ g x 
+
+def Integrate (f: Float -> Float) (cdf : Float -> Float): Float =  
+    xs = linspace (Fin 1000) (-3.0) 3.0
+    mean for i. (f xs.i) * (cdf xs.i)
+
+'##### Empirical CDF 
+
+def empirical_cdf (n : Nat ) (key: Key) (x : Float): Float = 
+    xs : (Fin n => Float) = arb key 
+    total = sum for i.  b_to_f (xs.i <= x)
+    total / (n_to_f n)
+
+'##### Functional 
+
+def functional (target: Float -> Float) (f: Float -> Float) (cdf: Float -> Float) : Float = 
+    xs = linspace (Fin 1000) (-3.0) 3.0
+    Integrate (\x. (\y. y * y) ((target x) - (f x))) cdf
+
+'##### Estimator
+
+estimator =  (functional (\x. x*x) (\x. x)) .*. (empirical_cdf 100)  
+
+:t estimator
+
+'##### Simulate 
+
+key = new_key 1
+
+-- cdf = empirical_cdf 100 key 
+-- Integrate (\x. x) cdf
+keys =  split_key key :: Fin 1000=>Key
+zs = map estimator keys 
+mean zs
+
+
+-- :html show_plot $ xy_plot xs ys
