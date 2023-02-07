@@ -1,9 +1,9 @@
 '### Questions
 - what is `get_at`?
 - what is `arb`?
+- what is `[Ix a, Ix b]`?
 
-
-
+'### Basics
 
 '##### Relu 
 Takes a scalar value and will return the same value if it's greater than zero. Otherwise, it returns 0. 
@@ -11,33 +11,29 @@ Takes a scalar value and will return the same value if it's greater than zero. O
 def relu (input : Float) : Float =
   select (input > 0.0) input 0.0
 
+'##### DenseParams 
+Is a type constructor. It takes two ordered types, and creates a new type consisting of two "tables"
+
+def DenseParams  (a: Type) (b : Type) [Ix a, Ix b]: Type = 
+    ((a=>b=>Float) & (b=>Float))
+
 '##### Layer 
-Is made up of two functions: `forward` and `init`
+Is a type constructor. It takes three types as inputs and returns record consisting of two functions  
+- forward
+- init
 
 data Layer inp:Type out:Type params:Type =
   AsLayer {forward:(params -> inp -> out) & init:(Key -> params) }
 
-def linear_map (params : Float) (x : Float) : Float = 
-    params * x
+'##### Dense 
+Is a type constructor the also implements the necessary functions for layer 
 
-def init (k : Key) : Float = 
-    rand k
-
-model = AsLayer {forward = linear_map, init}
-
-:t model
-
-(AsLayer l' ) = model 
-
-:t l'
-
-:t (get_at #forward l')
-
-
-'A layer is represented via a record with two fields
-    
-- forward
-- init 
+def dense (a : Type) (b : Type) [Ix a, Ix b] : Layer (a=>Float) (b=>Float) (DenseParams a b) = 
+    AsLayer {
+        forward = (\ ((weight, bias)) x . 
+            for j. (bias.j + sum for i. weight.i.j * x.i)), 
+        init = arb
+    }
 
 def forward_pass {i o p} (l : Layer i o p) (p  : p) (x : i) : o = 
     (AsLayer l' ) = l --what?
@@ -48,27 +44,60 @@ def initialize_params {i o p} (l:Layer i o p) (key: Key) : p =
     initializer = (get_at #init l') -- project out the initializer function
     initializer key  
 
-init_params = initialize_params model $new_key 1 
-init_params
+def MLP (a:Nat) (b:Nat) =
+  layer1 = dense (Fin a) (Fin b)
+  layer2 = dense (Fin b) (Fin 1)
+  AsLayer {
+    forward = (\ (params1, params2) x.
+         x1' = forward_pass layer1 params1 x
+         x1 = for i. relu x1'.i
+         forward_pass layer2 params2 x1),
+    init = (\key.
+         [k1, k2] = split_key key
+         (initialize_params layer1 k1, initialize_params layer2 k2))
+  }
 
-yhat = forward_pass model init_params 2.0 
-yhat 
 
-'##### DenseParams 
-Is a type constructor. It takes two ordered types, and creates a new type consisting of two "tables"
+n_obs : Nat = 100 
+n_features : Nat = 1
 
-def DenseParams  (a: Type) (b : Type) [Ix a, Ix b]: Type = 
-    ((a=>b=>Float) & (b=>Float))
+model = MLP n_features 32 
+key = new_key 1 
+
+[key_params, key_data] = split_key key 
+
+[key_xs, key_ys] = split_key key_data
 
 
-def dense (a : Type) (b : Type) [Ix a, Ix b] : Layer (a=>Float) (b=>Float) (DenseParams a b) = 
-    AsLayer {
-        forward = (\ ((weight, bias)) x . 
-            for j. (bias.j + sum for i. weight.i.j * x.i)), 
-        init = arb
-    }
 
-model2 = dense (Fin 32) (Fin 32)
-:t model2
+xs : ((Fin n_obs) => (Fin n_features) => Float) = arb key_xs 
+ys : ((Fin n_obs) => (Fin 1) =>  Float) = for i. sin xs.i --arb key_ys 
+
+:t xs 
+
+init_params = initialize_params model key_params
+
+yhat = for i. forward_pass model init_params xs.i 
+
+def square (x:Float): Float = 
+    x * x
+
+def loss_fn (y : ((Fin n_obs) => (Fin 1) => Float32))  (yhat : ((Fin n_obs) => (Fin 1) => Float32)) : Float =
+    yhat_t = transpose yhat 
+    yhat_squeeze = yhat_t.(0 @ _) 
+    y_t = transpose y 
+    y_squeeze = y_t.(0 @ _)
+    sum for i. square (y_squeeze.i-yhat_squeeze.i)
+
+loss_fn yhat ys
+
+
+
+grad loss_fn ys 
+
+
+
+
+
 
 
