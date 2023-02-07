@@ -1,12 +1,9 @@
 '### Questions
 - what is `get_at`?
+- what is `arb`?
 
 
-'##### DenseParams 
-Is a type constructor. It takes two ordered types, and creates a new type consisting of two "tables"
 
-def DenseParams  (a: Type) (b : Type) [Ix a, Ix b]: Type = 
-    ((a=>b=>Float) & (b=>Float))
 
 '##### Relu 
 Takes a scalar value and will return the same value if it's greater than zero. Otherwise, it returns 0. 
@@ -56,4 +53,22 @@ init_params
 
 yhat = forward_pass model init_params 2.0 
 yhat 
+
+'##### DenseParams 
+Is a type constructor. It takes two ordered types, and creates a new type consisting of two "tables"
+
+def DenseParams  (a: Type) (b : Type) [Ix a, Ix b]: Type = 
+    ((a=>b=>Float) & (b=>Float))
+
+
+def dense (a : Type) (b : Type) [Ix a, Ix b] : Layer (a=>Float) (b=>Float) (DenseParams a b) = 
+    AsLayer {
+        forward = (\ ((weight, bias)) x . 
+            for j. (bias.j + sum for i. weight.i.j * x.i)), 
+        init = arb
+    }
+
+model2 = dense (Fin 32) (Fin 32)
+:t model2
+
 
