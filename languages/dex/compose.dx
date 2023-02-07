@@ -1,0 +1,14 @@
+def f(x:Float): Float = 
+    x + x 
+
+
+def compose (f: Float -> Float) (n:Nat) (x:Float) : Float =
+    (lf, _) = yield_state (x, 0) \state.
+        while do
+            (acc, i) = get state
+            if (i < n)
+                then
+                    state := (f acc, i + 1)
+                    True
+                else False
+    lf

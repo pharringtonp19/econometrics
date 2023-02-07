@@ -30,4 +30,9 @@ f_n \circ \theta_n &:: \Omega_n \to \mathcal{X} \to \mathcal{R} \\ \\
 
     From this, we observe that $f_n \circ \theta_n$ is a **random function** and that $\gamma _n$ is a **random functional**
 
+???+ note "Other"
+
+    $$\begin{align*} 
+    \hat{g} :: \Omega_n \to \mathcal{X} \to \mathcal{R}\end{align*}$$
+
 ### **Partial Convergence**

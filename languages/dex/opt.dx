@@ -1,0 +1,35 @@
+import plot
+
+def (.*.) {a:Type} (f : a -> a) (g : a -> a)  :  (a -> a) =
+    \x. g (f x)
+
+def (*.*) {a:Type} (n:Nat)  (f : a -> a) : a -> a = 
+    \x. yield_state x \ansRef. 
+        for i:(Fin n).
+            ansRef := f (get ansRef)
+
+def target (x: Float) : Float =
+    x * x
+
+def model (p: Float) (x: Float): Float = 
+    p * x  
+
+def loss  {n} (xs: Fin n => Float) (ys: Fin n => Float) (f: Float -> Float) (model : (Float -> Float -> Float)) (params: Float): Float = 
+    for i. ((f params xs.i) - ys.i)**2
+
+
+def step (f : Float -> Float) (x:Float) : Float =
+    x - 0.01 * grad f x 
+
+def sgd (n: Nat) (update: (Float32 -> Float32))  (x:Float) : Float = 
+    (n *.* update) x 
+
+sgd 1000 (step objective) 1.0
+
+Nx = Fin 1000
+
+noise = 0.1
+[k1, k2] = split_key (new_key 0)
+
+xs : Nx=>Float = for i. rand (ixkey k1 i)
+

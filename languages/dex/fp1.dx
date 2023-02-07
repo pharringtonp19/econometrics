@@ -1,0 +1,59 @@
+'### Questions
+- what is `get_at`?
+
+
+'##### DenseParams 
+Is a type constructor. It takes two ordered types, and creates a new type consisting of two "tables"
+
+def DenseParams  (a: Type) (b : Type) [Ix a, Ix b]: Type = 
+    ((a=>b=>Float) & (b=>Float))
+
+'##### Relu 
+Takes a scalar value and will return the same value if it's greater than zero. Otherwise, it returns 0. 
+
+def relu (input : Float) : Float =
+  select (input > 0.0) input 0.0
+
+'##### Layer 
+Is made up of two functions: `forward` and `init`
+
+data Layer inp:Type out:Type params:Type =
+  AsLayer {forward:(params -> inp -> out) & init:(Key -> params) }
+
+def linear_map (params : Float) (x : Float) : Float = 
+    params * x
+
+def init (k : Key) : Float = 
+    rand k
+
+model = AsLayer {forward = linear_map, init}
+
+:t model
+
+(AsLayer l' ) = model 
+
+:t l'
+
+:t (get_at #forward l')
+
+
+'A layer is represented via a record with two fields
+    
+- forward
+- init 
+
+def forward_pass {i o p} (l : Layer i o p) (p  : p) (x : i) : o = 
+    (AsLayer l' ) = l --what?
+    (get_at #forward l') p x
+
+def initialize_params {i o p} (l:Layer i o p) (key: Key) : p = 
+    (AsLayer l') = l               -- Removes the value constructor 
+    initializer = (get_at #init l') -- project out the initializer function
+    initializer key  
+
+init_params = initialize_params model $new_key 1 
+init_params
+
+yhat = forward_pass model init_params 2.0 
+yhat 
+
