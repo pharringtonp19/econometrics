@@ -18,7 +18,7 @@ In some contexts, the estimand, $\beta$, can be expressed the application of a f
 '$$ \begin{aligned}
 &\hat{\mathbb{P}}_n :: \Omega _n \to \mathcal{B}(\mathcal{X}) \to [0,1] \\\\
 &\hat{f}_n :: \Omega_n \to \mathcal{X} \to \mathcal{R}\\\\
-&\hat{\beta} :: \Omega_n \to \mathcal{R} \\\\\ \end{aligned}$$
+&\hat{\beta} :: \Omega_n \to \Omega_n \to \mathcal{R} \\\\\ \end{aligned}$$
 
 '### Structure
 
@@ -54,16 +54,15 @@ def fhat (key: Key) (x: Float) : Float =
     p : Float = arb key 
     p * x 
 
-def estimator (key: Key): Float = 
-    [k1, k2] = split_key key 
-    f = fhat key 
-    measure = empirical_measure 1000 k2 
-    functional (\x.x) f measure 
+def estimator (k1: Key) (k2: Key): Float = 
+    (integrate 100 (-3.0) 3.0) (fhat k1) (empirical_measure 1000 k2 )
 
 
 :t estimator
 
-key = new_key 2 
+[k1, k2] = split_key $ new_key 2 
 
-keys = split_key key :: Fin 100=>Key
-mean $ map estimator keys 
+estimator k1 k2 
+
+-- keys = split_key key :: Fin 100=>Key
+-- mean $ map estimator keys 
