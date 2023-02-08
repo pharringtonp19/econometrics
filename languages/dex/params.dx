@@ -1,0 +1,18 @@
+data Params (n: Nat) (m: Nat) = AsParams {weights : (Fin n => Fin m => Float) & bias: (Fin m => Float)}
+
+def init_params (key: Key) (n: Nat) (m: Nat) : Params n m = 
+    [k1, k2] = split_key key 
+    AsParams {
+        weights = rand_mat n m rand k1, 
+        bias = rand_vec m rand k2
+    }
+
+
+
+n_features : Nat = 10 
+n_nodes : Nat = 32
+key = new_key 1 
+
+params = init_params key n_features n_nodes 
+
+:t params 

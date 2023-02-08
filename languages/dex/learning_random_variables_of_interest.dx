@@ -57,12 +57,76 @@ def fhat (key: Key) (x: Float) : Float =
 def estimator (k1: Key) (k2: Key): Float = 
     (integrate 100 (-3.0) 3.0) (fhat k1) (empirical_measure 1000 k2 )
 
+'### Basics
 
-:t estimator
+'##### Relu 
+Takes a scalar value and will return the same value if it's greater than zero. Otherwise, it returns 0. 
 
-[k1, k2] = split_key $ new_key 2 
+def relu (input : Float) : Float =
+  select (input > 0.0) input 0.0
 
-estimator k1 k2 
+'##### DenseParams 
+Is a type constructor. It takes two ordered types, and creates a new type consisting of two "tables"
 
--- keys = split_key key :: Fin 100=>Key
--- mean $ map estimator keys 
+def DenseParams  (a: Type) (b : Type) [Ix a, Ix b]: Type = 
+    ((a=>b=>Float) & (b=>Float))
+
+'##### Layer 
+Is a type constructor. It takes three types as inputs and returns record consisting of two functions  
+- forward
+- init
+
+data Layer inp:Type out:Type params:Type =
+  AsLayer {forward:(params -> inp -> out) & init:(Key -> params) }
+
+'##### Dense 
+Is a type constructor the also implements the necessary functions for layer 
+
+def dense (a : Type) (b : Type) [Ix a, Ix b] : Layer (a=>Float) (b=>Float) (DenseParams a b) = 
+    AsLayer {
+        forward = (\ ((weight, bias)) x . 
+            for j. (bias.j + sum for i. weight.i.j * x.i)), 
+        init = arb
+    }
+
+def forward_pass {i o p} (l : Layer i o p) (p  : p) (x : i) : o = 
+    (AsLayer l' ) = l --what?
+    (get_at #forward l') p x
+
+def initialize_params {i o p} (l:Layer i o p) (key: Key) : p = 
+    (AsLayer l') = l               -- Removes the value constructor 
+    initializer = (get_at #init l') -- project out the initializer function
+    initializer key  
+
+def MLP (a:Nat) (b:Nat) =
+  layer1 = dense (Fin a) (Fin b)
+  layer2 = dense (Fin b) (Fin 1)
+  AsLayer {
+    forward = (\ (params1, params2) x.
+         x1' = forward_pass layer1 params1 x
+         x1 = for i. relu x1'.i
+         forward_pass layer2 params2 x1),
+    init = (\key.
+         [k1, k2] = split_key key
+         (initialize_params layer1 k1, initialize_params layer2 k2))
+  }
+
+
+n_obs : Nat = 100 
+n_features : Nat = 1
+
+model = MLP n_features 32 
+:t model
+
+
+[key_params, key_data] = split_key $ new_key 1 
+[key_xs, key_ys] = split_key key_data
+init_params = initialize_params model key_params
+
+
+xs : ((Fin n_obs) => (Fin n_features) => Float) = arb key_xs 
+ys : ((Fin n_obs) => (Fin 1) =>  Float) = for i. sin xs.i --arb key_ys 
+
+:t xs 
+
+

@@ -1,0 +1,16 @@
+def f (x : Float) (p : Float) : Float = 
+    p * x
+
+:t grad (f 2.0)
+
+:t apply_n
+
+def maml  (n : Nat) (f: Float -> Float -> Float) (x : Float) (p : Float) : Float = 
+    p_maml = apply_n n p (grad (f x)) 
+    f x p_maml
+
+x = 2.0 
+p = 1.0 
+
+f x p 
+maml 2 f 2.0 1.0
