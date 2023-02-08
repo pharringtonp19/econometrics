@@ -1,18 +1,79 @@
-data Params (n: Nat) (m: Nat) = AsParams {weights : (Fin n => Fin m => Float) & bias: (Fin m => Float)}
+'### Parameters
 
-def init_params (key: Key) (n: Nat) (m: Nat) : Params n m = 
+data Params (m: Nat) (n: Nat) = AsParams {weights : (Fin m => Fin n => Float) & bias: (Fin m => Float)}
+
+def init_layer_params (key: Key) (m: Nat) (n: Nat) : Params m n = 
     [k1, k2] = split_key key 
     AsParams {
-        weights = rand_mat n m rand k1, 
+        weights = rand_mat m n rand k1, 
         bias = rand_vec m rand k2
     }
 
+nodes = [12, 32, 32, 1]
 
+
+inputs = slice nodes 0 (Fin 2)
+outputs = slice nodes 1 (Fin 2)
+
+def init_something (n: Nat) (m: Nat) (x: (Fin m => Nat)) = 
+    inputs = slice nodes 0 (Fin (n))
+    outputs = slice nodes 1 (Fin n)
+    for i:(Fin n).
+        o_dim = outputs.i 
+        i_dim = inputs.i 
+        init_layer_params (new_key 1) o_dim i_dim
+
+ 
+ def init_params (key: Key) (depth: Nat) (features:Nat) (width:Nat) : (Fin )= 
+    nodes = VecNodes depth features width 
+    depth_minus_1 = unsafe_i_to_n ((n_to_i depth) - 1)) 
+    inputs = slice nodes 0 (Fin depth_minus_1)
+    outputs = slice nodes 1 (Fin )depth_minus_1
+    for i. init_layer_params key inputs.i outputs.i
+
+
+
+key = new_key 1 
+init_layer_params key (outputs.(0 @ _ )) (inputs.(0 @ _ ))
+
+
+
+
+
+-- def init_params {n} (key: Key) (nodes: Fin n => Nat) = 
+--    init = key
+
+--    def body  
+--    body = \ix k. (k, init_layer_params k (nodes.ix @ _) (nodes.(ix+1) @ _))
+--    scan init body 
+    
+
+--:t for i:(Fin 3). (init_params (new_key 1) 10 10)
+
+    
+
+def mlp_layer {n m} (f: Float -> Float) (p: Params m n) (xs: Fin n => Float) : (Fin m => Float) = 
+    (AsParams p' ) = p 
+    xs' = (get_at #weights p') **. xs
+    for i. f (xs'.i + (get_at #bias p').i)
+
+'### Layer
 
 n_features : Nat = 10 
 n_nodes : Nat = 32
-key = new_key 1 
 
-params = init_params key n_features n_nodes 
+
+'### Example
+
+[params_key, data_key] = split_key $ new_key 1  
+
+xs = rand_vec n_features rand data_key
+:t xs
+params = init_params params_key  n_nodes n_features
+
+:t mlp_layer (\x.x) params xs 
+
+
+
 
 :t params 
