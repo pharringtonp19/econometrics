@@ -1,0 +1,11 @@
+(\x.x*x)(5)
+
+def f (x : Float) : Float = 
+    x * x
+
+
+def applyn {a} (n : Nat) (f : a-> a) (x : a) = 
+    yield_state x \ref. for _:(Fin n). 
+        ref := f (get ref)
+
+\x.x(x)

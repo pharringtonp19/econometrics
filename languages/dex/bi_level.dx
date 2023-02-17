@@ -1,0 +1,40 @@
+'### Structure 
+
+def sgd_step {a} [VSpace a] (step_size : Float) (decay : Float) (objective : a -> Float) (x : a) (m : a) : (a & a) = 
+    gradient = grad objective x
+    new_m = decay .* m + gradient 
+    new_x = x - step_size .* new_m 
+    (new_x, new_m)
+
+def optimizer {a} [VSpace a] (step_size : Float) (decay:Float) (num_steps:Nat) (objective : a -> Float) (x0: a) : a = 
+    m0 = zero 
+    (x_final, m_final) = yield_state (x0, m0) \state.
+        for i:(Fin num_steps).
+            (x, m) = get state 
+            state := sgd_step step_size decay objective x m 
+    x_final 
+
+def loss_fn {n} (target: Fin n => Float) (x: Fin n => Float) : Float = 
+    0.5 * sum for i. sq (target.i - x.i)
+
+'### Hyperparams
+
+step_size = 0.001 
+decay = 0.99 
+num_steps = 1000
+
+'### Simulations
+
+def eval {n} (target: Fin n => Float) (key: Key) : Float = 
+    params : Fin n => Float = arb key
+    opt_params = optimizer step_size decay num_steps (loss_fn target) params
+    loss_fn target opt_params
+
+def simulate (n:Nat) (m:Nat) (key: Key) : Float = 
+    [k1, k2] = split_key key
+    target : Fin n => Float = arb k1
+    keys = split_key k2 :: Fin m =>Key
+    results = map (eval target) keys
+    mean results 
+
+for i:(Fin 100). simulate (ordinal i) 100 $new_key 1
