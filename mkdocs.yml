@@ -19,6 +19,7 @@ nav:
         - Overparameterization: "chapters/optimization/overparam.md"
       - Probability Theory: 
         - Introduction: "chapters/probability theory/introduction.md"
+        - Key Terms: "chapters/probability theory/key_terms.md"
         - Expectation: "chapters/probability theory/expectations.md"
         - Independence: "chapters/probability theory/independence.md"
         - Conditioning: "chapters/probability theory/conditioning.md"
@@ -72,8 +73,8 @@ markdown_extensions:
     - pymdownx.tasklist:
         custom_checkbox: true
 
-plugins:
-  - typeset
+#plugins:
+#  - typeset
 
 extra_javascript: 
     # The below three make MathJax work, see https://squidfunk.github.io/mkdocs-material/reference/mathjax/
