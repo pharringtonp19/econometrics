@@ -5,7 +5,7 @@
 
 <h2 style="text-align: left;color:#404065;font-weight:bold;">Introduction</h2>
 
-Applied econometrics is fundamentally about **interpretation** -- how to interpret the result of a statistical procedure in a given context. Often, there isn't often a "valid" or "correct" interpretation. Much like a work of art, there are multiple interpretions available to statistical results. In line with this thinking, we're not going to emphasize a particular way to interpret results. Rather, we would like to introduce you to the statistical and computional tools as well as provide you with a broad set of real life examples so that you can further develop your own **judgement**. 
+Applied econometrics is fundamentally about **interpretation** -- how to interpret the result of a statistical procedure in a given context. Often, there isn't often a "valid" or "correct" interpretation. Much like a work of art, there are multiple interpretions available. In line with this thinking, we're not going to emphasize a particular way to interpret results. Rather, we would like to introduce you to the statistical and computional tools as well as provide you with a broad set of real life examples so that you can further develop your own **judgement**. 
 
 #### Learning from Data
 
