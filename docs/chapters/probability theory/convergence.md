@@ -1,20 +1,56 @@
-> Reference: STATS 203 - Large Sample Theory 
+??? Abstract "References"
+    - STATS 203 - Large Sample Theory 
+    - [Master Program: Probability Theory - Lecture 3: Applications of independence](https://youtu.be/VNSf9NcEwRA)
 
-???+ Abstract "TLDR"
+### **Introduction** 
+
+??? Abstract "TLDR"
 
     The defining feature of convergence is the restriction on the underlying probability space. 
 
     - In convergence in Law/distribution, we do not require $X_n$ and $X$ to be defined on the same probability space. 
-    - In convergence in probability or expectation, we require that for each $n$,  $X_n$ and $X$ are defined on the same probability space. i.e. they share the same probability space, but this probability space is allowed to change with $n$. 
+    - In convergence in probability or expectation, we require that for each $n$,  $X_n$ and $X$ are defined on the same probability space, but this probability space is allowed to change with $n$. 
     - In convergence almost surley, the underlying probability space for $X_n$ and $X$ must be the same and fixed for all $n$. 
 
-### **Motivation** 
-We are interested in the following function
+### **Weak Law of Large Numbers** 
+
+???+ Abstract "Presentation"
+
+    It seems like there are at least two distinct ways to illustrate this result. The first places more emphasis on random variables, the second, which I do below, places more emphasis on empirical measures. The relationship between these two approaches is the following: 
+
+    $$\mathcal{I} \ (x \mapsto x) \ \hat{\mathbb{P}}_n \equiv \frac{X_1 + X_2 + \dots + X_n}{n}$$
+
+We begin by defining a probability space parameterized by $n$. 
+
+$$\Big(\mathcal{R}^n,  \mathcal{B}(\mathcal{R}^n), \mathbb{P}^n\Big)$$ 
+
+!!! info inline end "Projection Random Variables"
+    Defined as follows:
+
+    $$\omega \in \Omega_n \longmapsto X_i(\omega) = \omega[i] $$
+
+with $n$ i.i.d **projection random variables**.
 
 $$ \begin{align*}
-&J :: \{n\} \to P(\Omega_n) \to (\theta^{d(n)} \to \mathcal{R}) \to \\
-&J \ \Omega_n \ \mathbb{P}_n \ (\hat{g}_n \circ \hat{\theta}_n)
+\hat{\mathbb{P}}_n &:: \mathcal{R}^n \to \mathcal{B}(\mathcal{R}) \to [0,1] \\ 
+\mathcal{I}_n &:: (\mathcal{R}^n \to \mathcal{R}) \to (\mathcal{B}(\mathcal{R}^n) \to [0,1]) \to \mathcal{R} \\
+\mathcal{I}_1 \ (x \mapsto x) \ \hat{\mathbb{P}}_n &:: \mathcal{R}^n \to [0,1] 
 \end{align*}$$
+
+From this, we can define the following sequence of random variables: 
+
+$$\begin{align*} d_n  &:: \mathcal{R}^n \to [0,1] \\
+& := \mathcal{I}_1 \ (x \mapsto x) \ \hat{\mathbb{P}}_n - \mathcal{I}_1 \ (x \mapsto x) \ \mathbb{P} \end{align*}$$
+
+We can show that the following result.
+
+$$\underset{n \to \infty}{\lim} \mathcal{I}_n \ d_n \ \mathbb{P}_n = 0 $$
+
+!!! Success "Result"
+
+    We say
+
+    $$\mathcal{I}_1 \ (x \mapsto x) \ \hat{\mathbb{P}}_n \ \textrm{converges in} \ L_2 \ \textrm{to} \ \mathcal{I}_1 \ (x \mapsto x) \ \mathbb{P}$$
 
 ### **Convergence in Distribution (or Law) **
 
