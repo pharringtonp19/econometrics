@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#motivation" class="md-skip">
+        <a href="#introduction" class="md-skip">
           Skip to content
         </a>
       
@@ -700,8 +700,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#motivation" class="md-nav__link">
-    Motivation
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#weak-law-of-large-numbers" class="md-nav__link">
+    Weak Law of Large Numbers
   </a>
   
 </li>
@@ -729,7 +736,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#weak-law-of-large-numbers" class="md-nav__link">
+  <a href="#weak-law-of-large-numbers_1" class="md-nav__link">
     Weak Law of Large Numbers
   </a>
   
@@ -1012,24 +1019,52 @@
 
   <h1>Convergence</h1>
 
-<blockquote>
-<p>Reference: STATS 203 - Large Sample Theory </p>
-</blockquote>
-<details class="abstract" open="open">
+<details class="abstract">
+<summary>References</summary>
+<ul>
+<li>STATS 203 - Large Sample Theory </li>
+<li><a href="https://youtu.be/VNSf9NcEwRA">Master Program: Probability Theory - Lecture 3: Applications of independence</a></li>
+</ul>
+</details>
+<h3 id="introduction"><strong>Introduction</strong></h3>
+<details class="abstract">
 <summary>TLDR</summary>
 <p>The defining feature of convergence is the restriction on the underlying probability space. </p>
 <ul>
 <li>In convergence in Law/distribution, we do not require <span class="arithmatex">\(X_n\)</span> and <span class="arithmatex">\(X\)</span> to be defined on the same probability space. </li>
-<li>In convergence in probability or expectation, we require that for each <span class="arithmatex">\(n\)</span>,  <span class="arithmatex">\(X_n\)</span> and <span class="arithmatex">\(X\)</span> are defined on the same probability space. i.e. they share the same probability space, but this probability space is allowed to change with <span class="arithmatex">\(n\)</span>. </li>
+<li>In convergence in probability or expectation, we require that for each <span class="arithmatex">\(n\)</span>,  <span class="arithmatex">\(X_n\)</span> and <span class="arithmatex">\(X\)</span> are defined on the same probability space, but this probability space is allowed to change with <span class="arithmatex">\(n\)</span>. </li>
 <li>In convergence almost surley, the underlying probability space for <span class="arithmatex">\(X_n\)</span> and <span class="arithmatex">\(X\)</span> must be the same and fixed for all <span class="arithmatex">\(n\)</span>. </li>
 </ul>
 </details>
-<h3 id="motivation"><strong>Motivation</strong></h3>
-<p>We are interested in the following function</p>
+<h3 id="weak-law-of-large-numbers"><strong>Weak Law of Large Numbers</strong></h3>
+<details class="abstract" open="open">
+<summary>Presentation</summary>
+<p>It seems like there are at least two distinct ways to illustrate this result. The first places more emphasis on random variables, the second, which I do below, places more emphasis on empirical measures. The relationship between these two approaches is the following: </p>
+<div class="arithmatex">\[\mathcal{I} \ (x \mapsto x) \ \hat{\mathbb{P}}_n \equiv \frac{X_1 + X_2 + \dots + X_n}{n}\]</div>
+</details>
+<p>We begin by defining a probability space parameterized by <span class="arithmatex">\(n\)</span>. </p>
+<div class="arithmatex">\[\Big(\mathcal{R}^n,  \mathcal{B}(\mathcal{R}^n), \mathbb{P}^n\Big)\]</div>
+<div class="admonition info inline end">
+<p class="admonition-title">Projection Random Variables</p>
+<p>Defined as follows:</p>
+<div class="arithmatex">\[\omega \in \Omega_n \longmapsto X_i(\omega) = \omega[i] \]</div>
+</div>
+<p>with <span class="arithmatex">\(n\)</span> i.i.d <strong>projection random variables</strong>.</p>
 <div class="arithmatex">\[ \begin{align*}
-&amp;J :: \{n\} \to P(\Omega_n) \to (\theta^{d(n)} \to \mathcal{R}) \to \\
-&amp;J \ \Omega_n \ \mathbb{P}_n \ (\hat{g}_n \circ \hat{\theta}_n)
+\hat{\mathbb{P}}_n &amp;:: \mathcal{R}^n \to \mathcal{B}(\mathcal{R}) \to [0,1] \\ 
+\mathcal{I}_n &amp;:: (\mathcal{R}^n \to \mathcal{R}) \to (\mathcal{B}(\mathcal{R}^n) \to [0,1]) \to \mathcal{R} \\
+\mathcal{I}_1 \ (x \mapsto x) \ \hat{\mathbb{P}}_n &amp;:: \mathcal{R}^n \to [0,1] 
 \end{align*}\]</div>
+<p>From this, we can define the following sequence of random variables: </p>
+<div class="arithmatex">\[\begin{align*} d_n  &amp;:: \mathcal{R}^n \to [0,1] \\
+&amp; := \mathcal{I}_1 \ (x \mapsto x) \ \hat{\mathbb{P}}_n - \mathcal{I}_1 \ (x \mapsto x) \ \mathbb{P} \end{align*}\]</div>
+<p>We can show that the following result.</p>
+<div class="arithmatex">\[\underset{n \to \infty}{\lim} \mathcal{I}_n \ d_n \ \mathbb{P}_n = 0 \]</div>
+<div class="admonition success">
+<p class="admonition-title">Result</p>
+<p>We say</p>
+<div class="arithmatex">\[\mathcal{I}_1 \ (x \mapsto x) \ \hat{\mathbb{P}}_n \ \textrm{converges in} \ L_2 \ \textrm{to} \ \mathcal{I}_1 \ (x \mapsto x) \ \mathbb{P}\]</div>
+</div>
 <h3 id="convergence-in-distribution-or-law"><strong>Convergence in Distribution (or Law) </strong></h3>
 <ul>
 <li>A random variable <span class="arithmatex">\(X_n\)</span> convergences in distribution (or in law )to <span class="arithmatex">\(X\)</span> when the corresponding sequence of CDFs converge "pointwise" to the CDF
@@ -1062,7 +1097,7 @@ X_n \to_D X \implies F_{X_n} \to F_X
 \underset{n \to \infty}{\lim}\mathbb{P}(\|X_n - X \| &gt; \varepsilon)= 0
 \end{align}\]</div>
 <h3 id="applications"><strong>Applications</strong></h3>
-<h4 id="weak-law-of-large-numbers"><strong>Weak Law of Large Numbers</strong></h4>
+<h4 id="weak-law-of-large-numbers_1"><strong>Weak Law of Large Numbers</strong></h4>
 <p>Proof given <a href="https://youtu.be/VNSf9NcEwRA?list=PLo4jXE-LdDTS5BYqea-LcHdtjKwVcepP7&amp;t=192">here</a></p>
 <p>Let <span class="arithmatex">\(X_1, \dots, X_n\)</span> be a family of i.i.d random variables with a finite second moment. Then </p>
 <div class="arithmatex">\[\underset{n \to \infty}{\lim} \mathbb{E}\Big[\Big( \frac{X_1 + \dots + X_n}{n} - \mathbb{E}[X]\Big)^2\Big] = 0\]</div>
