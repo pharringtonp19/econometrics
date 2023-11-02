@@ -5,17 +5,15 @@
 
 <h2 style="text-align: left;color:#404065;font-weight:bold;">Introduction</h2>
 
-Applied econometrics is fundamentally about **interpretation** -- how to interpret the result of a statistical procedure in a given context. Often, there isn't often a "valid" or "correct" interpretation. Much like a work of art, there are multiple interpretions available. In line with this thinking, we're not going to emphasize a particular way to interpret results. Rather, we would like to introduce you to the statistical and computional tools as well as provide you with a broad set of real life examples so that you can further develop your own **judgement**. 
+Applied econometrics is fundamentally about **interpretation** -- how to interpret the result of a statistical procedure in a given context. Often, there isn't often a "valid" or "correct" interpretation. Much like a work of art, there are multiple interpretions available. In this course, we'll introduce you to a broad set of statitical tools and real life examples so that you can further develop your own **judgement**. 
 
-#### Learning from Data
-
-Learning from data, especially finite data where the estimand of interest has a causal interpretation is a highly personalized process. The general setup of the process is reflected visually below. We have beliefs about the world; we have beliefs about how a statical procedure behaves under certain conditions; the statistical procedure is applied to a data set providing use with numerical "results" which ultimately shape our new beliefs about the world. 
+Learning from data is a highly personalized process. The general setup of the process is reflected visually below. We have beliefs about the world; we have beliefs about how a statical procedure behaves under certain conditions; the statistical procedure is applied to a data set returning numerical "results" which ultimately shape our new beliefs about the world. 
 
 <figure markdown>
   ![Image title](./figs/the_process.png){ width="500" }
 </figure>
 
-#### Models 
+<!-- #### Models 
 
 We will never assume that the relationship is linear and moreover, we're not going to be centrally focused on fitting linear models
 
@@ -72,6 +70,6 @@ $$Y_i(D) = f(X_i, D) + \varepsilon_i(D)$$
     ---
     [:octicons-arrow-right-24: Getting started](chapters/math on the computer/introduction.md)
 
-</div>
+</div> -->
 
  

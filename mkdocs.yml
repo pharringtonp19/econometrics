@@ -7,6 +7,9 @@ nav:
   - Overview:
       - Summary: index.md
   - Topics:
+      - Fundamentals:
+        - Potential Outcomes: "chapters/fundamentals/potential outcomes.md"
+        - Difference-in-Means: "chapters/fundamentals/difference-in-means.md"
       - Approximation:
         - Introduction: "chapters/approximation/introduction.md"
         - Asymptotics: "chapters/approximation/asymptotics.md"
