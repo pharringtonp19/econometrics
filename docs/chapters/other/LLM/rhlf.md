@@ -1,0 +1,2 @@
+- the challenge with this set-up is the effective domain of the reward model
+    - We use the KL constraint to try and account for this issue

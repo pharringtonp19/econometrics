@@ -38,6 +38,8 @@ nav:
       - Other:
         - LLM:
           - Introduction: "chapters/other/LLM/introduction.md"
+          - RHLF: "chapters/other/LLM/rhlf.md"
+
 
 theme:
   name: material

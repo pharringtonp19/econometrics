@@ -3,9 +3,15 @@
 <!-- <p style="text-align: center;">Applied Econometrics is a highly personalized endevour</p> -->
 
 
+
+
 <h2 style="text-align: left;color:#404065;font-weight:bold;">Introduction</h2>
 
 Applied econometrics is fundamentally about **interpretation** -- how to interpret the result of a statistical procedure in a given context. Often, there isn't often a "valid" or "correct" interpretation. Much like a work of art, there are multiple interpretions available. In this course, we'll introduce you to a broad set of statitical tools and real life examples so that you can further develop your own **judgement**. 
+
+<figure markdown>
+  ![Image title](./figs/lfd.png){ width="500" }
+</figure>
 
 Learning from data is a highly personalized process. The general setup of the process is reflected visually below. We have beliefs about the world; we have beliefs about how a statical procedure behaves under certain conditions; the statistical procedure is applied to a data set returning numerical "results" which ultimately shape our new beliefs about the world. 
 

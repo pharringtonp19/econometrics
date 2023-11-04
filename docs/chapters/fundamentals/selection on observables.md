@@ -1,0 +1,1 @@
+- Correct for the propensity score which is to say that we're trying to correct for the difference in the distribution over the covariate space between the treated and control groups
