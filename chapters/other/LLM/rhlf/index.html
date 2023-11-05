@@ -83,6 +83,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#reinforcement-learning-overview" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -1466,6 +1471,23 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    
+  
+    RHLF
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1481,6 +1503,56 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#reinforcement-learning-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reinforcement Learning Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-rl-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The RL Problem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rhlf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RHLF
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1528,6 +1600,25 @@
 
   <h1>RHLF</h1>
 
+<h4 id="reinforcement-learning-overview"><strong>Reinforcement Learning Overview</strong></h4>
+<p>David Silver in his <a href="https://youtu.be/2pWv7GOvuf0">introductory class</a> on RL makes the following distinctions between reinforcement learning and supervised learning:</p>
+<ol>
+<li>"There is no supervisor, only a reward signal". I am not a fan of this distinction because in supervised learning we don't have a supervisor. Generally, we're not trying to perfectly interpolate the data. Rather, we have a reward signal of the loss function <span class="arithmatex">\((y - f_{\theta}(x))^2\)</span></li>
+<li>"Feedback is delayed, not instantaneous"</li>
+<li>"Time really matters (sequential, non i.i.d data)" and "Agent's actions affect the subsequent data it receives"</li>
+</ol>
+<h4 id="the-rl-problem"><strong>The RL Problem</strong></h4>
+<p>Let <span class="arithmatex">\(\Theta\)</span> be a parameter space and <span class="arithmatex">\(\theta \in \Theta\)</span> a parameter vector that governs the dynamics of a stochastic process:  <span class="arithmatex">\(\big(\Omega, \mathcal{F}, \mathbb{P}_{\theta}\big)\)</span>. We are interested in identifying the parameter <span class="arithmatex">\(\theta^*\)</span> that maximizes the expected cumulative reward over time. Formally, the optimization problem can be stated as:</p>
+<div class="arithmatex">\[\begin{align*}
+\theta^* = \underset{\theta \in \Theta}{\textrm{arg max}} \ \mathbb{E}_{\theta}\Big[\sum _{t=1}^T R_t\Big]
+\end{align*}\]</div>
+<p>where:</p>
+<ul>
+<li><span class="arithmatex">\(\theta^*\)</span> is the optimal parameter vector.</li>
+<li><span class="arithmatex">\(\mathbb{E}_{\theta}[\cdot]\)</span> denotes the expectation with respect to the probability distribution induced by the parameter <span class="arithmatex">\(\theta\)</span>.</li>
+<li><span class="arithmatex">\(\sum_{t=1}^{T} R_t\)</span> is the cumulative reward over a finite time horizon <span class="arithmatex">\(T\)</span>, with <span class="arithmatex">\(R_t\)</span> representing the reward at time <span class="arithmatex">\(t\)</span> which may be random and dependent on <span class="arithmatex">\(\theta\)</span>.</li>
+</ul>
+<h4 id="rhlf"><strong>RHLF</strong></h4>
 <ul>
 <li>the challenge with this set-up is the effective domain of the reward model<ul>
 <li>We use the KL constraint to try and account for this issue</li>
