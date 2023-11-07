@@ -20,13 +20,13 @@ $$\begin{align*}
 \textrm{Estimand} :=  \sum f(x) v(x)\\
 \end{align*}$$
 
-One approach in this context is to transform the random variable $h(x)= f(x)\frac{v(x)}{q(x)}$, and take the average of this random variable with respect to $q(x)$.
+One approach in this context is to transform the random variable via a correction term. That is, we introduce a new random variable which is a scaled version of our original random variable $h(x)= f(x)\frac{v(x)}{q(x)}$, and take the average of this random variable with respect to $q(x)$.
 
 $$\begin{align*}
 \textrm{Observe} :=  \sum h(x) q(x) = f(x)\frac{v(x)}{q(x)} q(x) =  \sum f(x) v(x) = \textrm{Estimand} 
 \end{align*}$$
 
-In our context, $q(x) = p_{X \vert D=1}(x)$ and $v(x) = p(x)$. Therefore our "correction term" is the ratio of these two values:
+In our context, $q(x) = p_{X \vert D=1}(x)$ and $v(x) = p(x)$. Therefore our "correction term" is the ratio of these two values: the unconditional probability of treatment and the propensity score.
 
 $$\begin{align*}
 \textrm{Correction Term} &:= \frac{p(x)}{ p_{X \vert D=1}(x)} \\
