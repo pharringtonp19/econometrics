@@ -1,1 +1,51 @@
-- Correct for the propensity score which is to say that we're trying to correct for the difference in the distribution over the covariate space between the treated and control groups
+
+#### **Consider**
+
+The question that has been lurking in the back of your head up to this point is whether it would be appropriate to use a difference-in-means estimator when the selection on observable assumption holds. That is, if we can think of our data as coming from a "local" randomized control trial, does the difference in means estimator recover the average treatment effect?
+
+Let's think through this. Applying the Law of Total Probability, we can express the first term in the estimator as follows:
+
+
+
+
+$$\begin{align*}\mathbb{E}[Y_i \vert D_i=1] &= \sum \mathbb{E}[Y_i \vert D_i=1, X_i=x] p_{X\vert D=1}(x) \\
+&= \sum \mathbb{E}[\tilde{Y}_i(1) \vert D_i=1, X_i=x] p_{X\vert D=1}(x) \\
+&= \sum \mathbb{E}[\tilde{Y}_i(1) \vert X_i=x] p_{X\vert D=1}(x)\end{align*}$$
+
+
+The immediate issue that jumps out to us is that the conditional distribution $p_{X \vert D=1}(x)$ may not equal the unconditional distribution, $p_X(x)$, in which case our estimator would be biased. Another way to frame this problem is as follows: We observe a random variable following a distribution $q(x)$, but we are interested in taking the expected value with respect to a different distribution $v(x)$. That is:
+
+$$\begin{align*}
+\textrm{Observe} :=  \sum f(x) q(x)\\
+\textrm{Estimand} :=  \sum f(x) v(x)\\
+\end{align*}$$
+
+One approach in this context is to transform the random variable $h(x)= f(x)\frac{v(x)}{q(x)}$, and take the average of this random variable with respect to $q(x)$.
+
+$$\begin{align*}
+\textrm{Observe} :=  \sum h(x) q(x) = f(x)\frac{v(x)}{q(x)} q(x) =  \sum f(x) v(x) = \textrm{Estimand} 
+\end{align*}$$
+
+In our context, $q(x) = p_{X \vert D=1}(x)$ and $v(x) = p(x)$. Therefore our "correction term" is the ratio of these two values:
+
+$$\begin{align*}
+\textrm{Correction Term} &:= \frac{p(x)}{ p_{X \vert D=1}(x)} \\
+&=   p_X(x)   \div \frac{ p_{X,D}(x, 1)}{p_D(1)} \\ 
+&= \frac{p_D(1) p_X(x)}{ p_{X,D}(x, 1)}   \\ 
+&= \frac{p_D(1)}{p_{D \vert X=x}(1)}
+\end{align*}$$
+
+Let's now check that if we use this correction term, the difference-in-means estimator will return the average treatment effect. To do so, let $W_i = \frac{Y_i p_D(1)}{p_{D\vert X_i}(1)}$
+
+$$\begin{align*}
+\mathbb{E}[W_i \vert D_i=1] &= \sum \mathbb{E}[W_i \vert D_i=1, X_i=x] p_{X\vert D=1}(x) \\
+&= \sum \mathbb{E}[\frac{Y_i p_D(1)}{p_{D\vert X_i=x}(1)} \vert D_i=1, X_i=x] p_{X\vert D=1}(x) \\
+&= p_D(1)\sum \mathbb{E}[Y_i \vert D_i=1, X_i=x]\frac{p_{X\vert D=1}(x)}{p_{D\vert X_i=x}(1)}\\
+&= p_D(1)\sum \mathbb{E}[\tilde{Y}_i(1) \vert D_i=1, X_i=x]\frac{p_{X\vert D=1}(x)}{p_{D\vert X_i=x}(1)}\\
+&= p_D(1)\sum \mathbb{E}[\tilde{Y}_i(1) \vert X_i=x]\frac{p_{X\vert D=1}(x)}{p_{D\vert X_i=x}(1)} \\
+&= p_D(1)\sum \mathbb{E}[\tilde{Y}_i(1) \vert X_i=x] \frac{\frac{p_{X,D}(x,1)}{p_{D}(1)}}{\frac{p_{X,D}(x,1)}{p_{X}(x)}} \\
+&= p_D(1)\sum \mathbb{E}[\tilde{Y}_i(1) \vert X_i=x] \frac{p_X(x)}{p_D(1)} \\
+&= \sum \mathbb{E}[\tilde{Y}_i(1) \vert X_i=x] p_X(x) \\ 
+&= \mathbb{E}[\tilde{Y}_i(1)]
+\end{align*}$$
+

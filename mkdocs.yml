@@ -10,6 +10,7 @@ nav:
       - Fundamentals:
         - Potential Outcomes: "chapters/fundamentals/potential outcomes.md"
         - Difference-in-Means: "chapters/fundamentals/difference-in-means.md"
+        - Selection on Observables: "chapters/fundamentals/selection on observables.md"
       - Approximation:
         - Introduction: "chapters/approximation/introduction.md"
         - Asymptotics: "chapters/approximation/asymptotics.md"
