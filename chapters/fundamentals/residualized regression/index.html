@@ -15,6 +15,10 @@
         <link rel="canonical" href="https://pharringtonp19.github.io/econometrics/chapters/fundamentals/residualized%20regression/">
       
       
+        <link rel="prev" href="../selection%20on%20observables/">
+      
+      
+        <link rel="next" href="../../approximation/introduction/">
       
       
         
@@ -25,7 +29,7 @@
     
     
       
-        <title>Residualized regression - Econometrics</title>
+        <title>Residualized Regression - Econometrics</title>
       
     
     
@@ -81,6 +85,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#instrumental-variables" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -110,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Residualized regression
+              Residualized Regression
             
           </span>
         </div>
@@ -193,17 +202,21 @@
         
   
   
+    
+  
   
     
     
       
   
   
+    
+  
   
     
     
       <li class="md-tabs__item">
-        <a href="../potential%20outcomes/" class="md-tabs__link">
+        <a href="../potential%20outcomes/" class="md-tabs__link md-tabs__link--active">
           
   
     
@@ -321,6 +334,8 @@
       
   
   
+    
+  
   
     
     
@@ -339,13 +354,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
@@ -364,7 +379,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -379,6 +394,8 @@
                 
   
   
+    
+  
   
     
     
@@ -389,15 +406,17 @@
       
         
       
+        
+      
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
         
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
             
@@ -416,7 +435,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -500,6 +519,85 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    
+  
+    Residualized Regression
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Residualized Regression
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instrumental-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instrumental Variables
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1534,11 +1632,23 @@
                   
 
 
-  <h1>Residualized regression</h1>
+  <h1>Residualized Regression</h1>
 
-<ul>
-<li>How is the weighting done?</li>
-</ul>
+<h4 id="instrumental-variables"><strong>Instrumental Variables</strong></h4>
+<p>Linear instrumental variables consists of a the following two step process. We first regress the treatment variable <span class="arithmatex">\(D_i\)</span> on the controls <span class="arithmatex">\(X_i\)</span> and the instrument <span class="arithmatex">\(Z_i\)</span>. We then regress the outcome variable <span class="arithmatex">\(Y_i\)</span> on the predicted treatment <span class="arithmatex">\(\hat{D}_i\)</span> and the controls.</p>
+<div class="arithmatex">\[\begin{align*}
+D_i &amp;= \gamma_1 X_i + \gamma_2 Z_i + v_i \\
+Y_i &amp;= \beta_1 \hat{D}_i + \beta_2 X_i + \varepsilon_i
+\end{align*}\]</div>
+<p>As emphasized in class, I prefer to interpret the coefficients in a linear model via a residualized approach. For one, it makes the source of the variation clear. We can interpret the coefficient <span class="arithmatex">\(\beta_1\)</span> in the second equation above via a residualized regression as follows where <span class="arithmatex">\(\bar{\hat{D}}\)</span> is the predicted predicted values! Not a typo. We first predict treatment given the controls and the instrument. We then predict this predicted value given only the controls. Via the law of iterated expectations it is equivalent to the predicted treatment given the controls.</p>
+<div class="arithmatex">\[\begin{align*}
+Y_i &amp;= \beta_1 (\hat{D}_i - \bar{\hat{D}}_i) + u_i \\ 
+\end{align*}\]</div>
+<p>As I also emphasize in class, I tent to think of linear models as approximations to the underlying conditional expectation function. Therefore, we can re-write the above regression in its nonparametric form as follows:</p>
+<div class="arithmatex">\[\begin{align*}
+ Y_i &amp;= \beta_1 (\mathbb{E}[D_i \vert X_i, Z_i] - \mathbb{E}[D_i \vert X_i] ) + u_i \\ 
+\end{align*}\]</div>
+<p>When I see a linear IV model in a paper, I try to interpret is as an approximation to the above regression. </p>
 
 
 
