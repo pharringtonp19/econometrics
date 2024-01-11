@@ -1080,13 +1080,22 @@
 
   <h1>Potential Outcomes</h1>
 
-<p>The causal effect of a treatment is the difference in some outcome when a person receives the treatment and when a person does not receive the treatment. Re-reading the line above, hopefully it jumps out to you that we cannot in fact observe a person in both of the states of the world. For instance, if we are interested in understanding the effects of a college education on annual earnings at the age of 40, we observe each person either with a college education or without one. This highlights that the funamental issue of a causal inference is a missing data problem. </p>
-<p>While we cannot ever know the causal effects at the individual level, its nevertheless important to be able to define them. To do so, we introduce the potential outcome function which maps levels of the treatment variable into some outcome set. Continuing with our example of college education, we would define the potential outcome function as follows. </p>
+<p>If I were to ask you to define the causal effect of a treatment, how would you do so? In this brief note, we'll introduce a framework for defining causal effects.</p>
+<p>Intuitively, we know that the causal effect of a treatment is the difference in some outcome when a person receives the treatment and when a person does not receive the treatment. Re-reading the line above, hopefully it jumps out to you that we cannot in fact observe a person in both of the states of the world. For instance, if we are interested in understanding the effects of a college education on annual earnings at the age of 40, we can observe each person either with a college education or without one. This highlights that the funamental issue of a causal inference is a missing data problem. </p>
+<p>While we cannot ever know the causal effects at the individual level, its nevertheless important to be able to define it at this level. To do so, we introduce the potential outcome function which maps levels of the treatment variable into an outcome space.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> Continuing with our example of college education, we can define the potential outcome function as follows. </p>
 <div class="arithmatex">\[\tilde{Y}_i : \{\textrm{College Education}, \textrm{No College Education}\} \to \mathcal{R}\]</div>
 <p>We can define the individual level treatment effect then as the difference, where we have replaced the college/no college status with an binary variable (i.e. a variable which takes the values either 1 or 0). </p>
 <div class="arithmatex">\[\tilde{Y}_i(1) -\tilde{Y}_i(0)\]</div>
 <p>With this set-up, we can then define the average treatment effect as the expectation of this difference over the entire population of interest. In many contexts, we will be interested in estimating this term. In our running example, this would be the return on education averaged over the entire population of interest.</p>
 <div class="arithmatex">\[\textrm{ATE} = \mathbb{E}[\tilde{Y}_i(1) -\tilde{Y}_i(0)]\]</div>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Question: What's the difference between a set and a space?&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
 
 
