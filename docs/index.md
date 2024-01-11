@@ -9,6 +9,8 @@
 
 Applied econometrics is fundamentally about **interpretation** -- how to interpret the result of a statistical procedure in a given context. Often, there isn't often a "valid" or "correct" interpretation. In this course, we'll introduce you to a broad set of statitical tools and real life examples so that you can further develop your own **judgement**. 
 
+It's important to keep in mind though that you will often need to communicate this judgement to others. You'll have to explain to them why you consider something the way you do.
+
 <figure markdown>
   ![Image title](./figs/lfd.png){ width="500" }
 </figure>

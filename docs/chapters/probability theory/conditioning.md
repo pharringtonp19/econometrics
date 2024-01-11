@@ -1,10 +1,22 @@
 ## **Conditioning**
 
+
+
 Given a measurable space, $(\Omega, \mathcal{F})$, let $\mathcal{M}$ be the set of probability measures defined on this space. Then conditioning can be defined as follows:
+
+**Events**
 
 $$\begin{align*}
 &C :: \mathcal{M} \to \mathcal{F}_+ \to \mathcal{M} \\
 & C \ \mathbb{P} \ A  \ B = \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(A)} \end{align*}$$
+
+
+**Random Variables**
+
+$$\begin{align*}
+&\tilde{C} :: \mathcal{M} \to (\Omega \to \mathcal{R}) \to \mathcal{F}_{\sigma(X)}\to \mathcal{M} \\
+& C \ \mathbb{P} \ A  \ B = \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(A)} \end{align*}$$
+
 
 Two things to note here: 
 

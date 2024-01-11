@@ -14,6 +14,7 @@ nav:
         - Residualized Regression: "chapters/fundamentals/residualized regression.md"
       - Approximation:
         - Introduction: "chapters/approximation/introduction.md"
+        - Topology: "chapters/approximation/topology.md"
         - Asymptotics: "chapters/approximation/asymptotics.md"
         - Curse of Dimensionality: "chapters/approximation/curse_of_dimensionality.md"
         - Kernels: "chapters/approximation/kernels.md"

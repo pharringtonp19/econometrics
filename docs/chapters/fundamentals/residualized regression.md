@@ -19,5 +19,5 @@ $$\begin{align*}
  Y_i &= \beta_1 (\mathbb{E}[D_i \vert X_i, Z_i] - \mathbb{E}[D_i \vert X_i] ) + u_i \\ 
 \end{align*}$$
 
-When I see a linear IV model in a paper, I try to interpret is as an approximation to the above regression. 
+When I see a linear IV model in a paper, I try to interpret is as an approximation to the above regression. IV keeps only the local source of the treatment due to the instrument. IV is a local correction of the treatment variable.
 

@@ -12,3 +12,5 @@ With this set-up, we can then define the average treatment effect as the expecta
 
 $$\textrm{ATE} = \mathbb{E}[\tilde{Y}_i(1) -\tilde{Y}_i(0)]$$
 
+
+
