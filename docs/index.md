@@ -3,23 +3,23 @@
 <!-- <p style="text-align: center;">Applied Econometrics is a highly personalized endevour</p> -->
 
 
-
-
 <h2 style="text-align: left;color:#404065;font-weight:bold;">Introduction</h2>
 
 Applied econometrics is fundamentally about **interpretation** -- how to interpret the result of a statistical procedure in a given context. Often, there isn't often a "valid" or "correct" interpretation. In this course, we'll introduce you to a broad set of statitical tools and real life examples so that you can further develop your own **judgement**. 
 
-It's important to keep in mind though that you will often need to communicate this judgement to others. You'll have to explain to them why you consider something the way you do.
+
 
 <figure markdown>
   ![Image title](./figs/lfd.png){ width="500" }
 </figure>
 
-Learning from data is a highly personalized process. The general setup of the process is reflected visually below. We have beliefs about the world; we have beliefs about how a statical procedure behaves under certain conditions; the statistical procedure is applied to a data set returning numerical "results" which ultimately shape our new beliefs about the world. 
+It's important to keep in mind that you will often need to communicate this judgement to others. You'll have to explain to them why you consider something the way you do. This can be difficult though because learning from data is a highly personalized process. We all have our own beliefs about the world, our own understanding of how algorithms behave, and therefore our own takeaways from seeing the data (see figure below). 
 
 <figure markdown>
   ![Image title](./figs/the_process.png){ width="500" }
 </figure>
+
+And so I don't think the purpose of presenting statistical results is to convince people to agree with you. I would focus more on being clear about how you arrive at your own conclusions and to be open minded that others might think differently. 
 
 <!-- #### Models 
 
